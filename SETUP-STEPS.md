@@ -141,6 +141,8 @@ chmod 600 /var/www/html/wp-config.php
 
 ### Step 1.7: Complete WordPress Installation
 
+**Option A: Fresh WordPress Install**
+
 1. **Open browser**: `http://YOUR_DEV_IP`
 2. **Select language**
 3. **Fill in WordPress installation form**:
@@ -150,6 +152,29 @@ chmod 600 /var/www/html/wp-config.php
    - Email: (your email)
 4. **Click "Install WordPress"**
 5. **Log in** with your credentials
+
+**Option B: Migrate Existing Local Database (Recommended)**
+
+If you want to use your existing local site's data:
+
+1. **Skip the WordPress installation** (or install it fresh first)
+2. **Follow the Database Migration Guide**: See `DATABASE-MIGRATION.md` for detailed instructions
+3. **Quick steps**:
+   - Export database from Local by Flywheel (phpMyAdmin → Export)
+   - Upload to server: `scp backup.sql root@YOUR_DEV_IP:/root/`
+   - Import: `mysql -u dev_wp_user -p dev_wordpress < /root/backup.sql`
+   - Update URLs: Use WP-CLI or Better Search Replace plugin
+   - Migrate uploads folder via SCP
+
+### Step 1.7a: Migrate Database (If Using Existing Data)
+
+**See `DATABASE-MIGRATION.md` for complete instructions.**
+
+Quick version:
+1. Export from Local by Flywheel (Database tab → Export)
+2. Upload: `scp backup.sql root@YOUR_DEV_IP:/root/`
+3. Import: `mysql -u dev_wp_user -p dev_wordpress < /root/backup.sql`
+4. Update URLs using WP-CLI or plugin (see migration guide)
 
 ### Step 1.8: Deploy Your Theme
 
