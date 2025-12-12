@@ -53,9 +53,6 @@ yarn.lock
 debug.log
 *.log
 
-# Vercel (if not using)
-.vercel
-
 # Temporary files
 *.tmp
 *.temp
