@@ -12,16 +12,52 @@ This method exports your entire local database and imports it to the server, the
 
 #### Using Local by Flywheel / LocalWP (Easiest)
 
-1. **Open Local by Flywheel**
-2. **Select your site**: "accurate-surveying-mapping"
-3. **Click "Database" tab** (or "Open Database" button)
-4. This opens **phpMyAdmin** in your browser
-5. **Select your database** from the left sidebar
-6. Click **"Export"** tab at the top
+**Method 1: Via Local Interface**
+
+1. **Open Local by Flywheel** (the Local app, not WordPress)
+2. **Select your site**: "accurate-surveying-mapping" from the left sidebar
+3. **Click the "Database" tab** in the Local app (should be visible in the main panel when site is selected)
+4. If you see an **"Open Database"** or **"Adminer"** button, click it
+   - This opens phpMyAdmin or Adminer in your browser
+5. **Select your database** from the left sidebar (usually named something like `local` or `accurate_surveying_mapping`)
+6. Click the **"Export"** tab at the top
 7. Choose **"Quick"** export method
 8. Format: **SQL**
-9. Click **"Go"**
-10. **Save the file** (e.g., `local-site-backup.sql`)
+9. Click **"Go"** or **"Export"**
+10. **Save the file** (e.g., `local-site-backup.sql`) to your Desktop or Downloads folder
+
+**Method 2: Via Command Line (If Database tab not visible)**
+
+If you don't see a Database tab in Local, you can export via terminal:
+
+```bash
+# Navigate to Local sites directory
+cd "/Users/shadrachtuck/Local Sites/accurate-surveying-mapping"
+
+# Find your database name - check conf/database.sqlite or look for MySQL config
+# Local typically stores MySQL in a docker container or uses a local MySQL
+
+# If using Local's built-in MySQL:
+# First, find the MySQL credentials
+# Check: Local app → Site → Database → View Connection Info
+
+# Then export:
+mysqldump -u root -p --databases local > ~/Desktop/local-site-backup.sql
+# Password is usually 'root' or 'local' for Local by Flywheel
+```
+
+**Method 3: Direct File Access (Local SQLite)**
+
+Some Local setups use SQLite. Check:
+```bash
+ls -la "/Users/shadrachtuck/Local Sites/accurate-surveying-mapping/conf/"
+# Look for database.sqlite or similar
+```
+
+**Still can't find it?** 
+- Look for **"Adminer"** or **"phpMyAdmin"** button in Local
+- Or check **Local Settings** → **Database** section
+- Alternative: Use the WordPress export tool (Tools → Export) for content, but database export is better
 
 #### Using Command Line (Alternative)
 
@@ -332,3 +368,4 @@ EXIT;
 ---
 
 **Ready to migrate? Start with Step 1 (Export from Local)!**
+

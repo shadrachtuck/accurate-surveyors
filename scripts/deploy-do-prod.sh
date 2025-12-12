@@ -98,3 +98,4 @@ echo "3. Test all pages and functionality"
 echo "4. Check for any errors in logs:"
 echo "   ssh $PROD_USER@$PROD_IP 'tail -f /var/log/apache2/error.log'"
 echo ""
+

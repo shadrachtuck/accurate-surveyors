@@ -123,3 +123,4 @@ echo ""
 echo "5. Install SSL certificate (after DNS is configured):"
 echo "   certbot --apache -d yourdomain.com"
 echo ""
+

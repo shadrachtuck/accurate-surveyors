@@ -1508,6 +1508,37 @@
             "install-path": "../team-updraft/lib-central"
         },
         {
+            "name": "team-updraft/lib-onboarding-wizard",
+            "version": "0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@source.updraftplus.com:20022/team-updraft/lib-onboarding-wizard.git",
+                "reference": "e20894a1c06b1ffd8d6d7c90df1ce76cbc2aa972"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://source.updraftplus.com/api/v4/projects/140/packages/composer/archives/team-updraft/lib-onboarding-wizard.zip?sha=e20894a1c06b1ffd8d6d7c90df1ce76cbc2aa972",
+                "reference": "e20894a1c06b1ffd8d6d7c90df1ce76cbc2aa972",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "LibOnboardingWizard"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "composer-plugin-extras"
+                ]
+            },
+            "description": "onboarding wizard",
+            "install-path": "../team-updraft/lib-onboarding-wizard"
+        },
+        {
             "name": "tubalmartin/cssmin",
             "version": "v4.1.1",
             "version_normalized": "4.1.1.0",

@@ -654,7 +654,12 @@ class WP_Optimize_Commands {
 	 * @return bool|int
 	 */
 	public function wipe_settings() {
-		return $this->options->wipe_settings();
+		$result = $this->options->wipe_settings();
+
+		$onboarding = WP_Optimize()->get_onboarding();
+		$onboarding->activate_onboarding_wizard();
+
+		return $result;
 	}
 
 	/**

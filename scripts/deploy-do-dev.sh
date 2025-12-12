@@ -81,3 +81,4 @@ echo "1. Visit: http://$DEV_IP/wp-admin"
 echo "2. Go to Appearance → Themes"
 echo "3. Activate 'Accurate Surveyors 2025'"
 echo ""
+

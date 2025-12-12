@@ -255,3 +255,4 @@ chmod 600 /var/www/html/wp-config.php
 - **Total**: ~$11-17/month
 
 **Get $200 free credit** with referral link!
+
