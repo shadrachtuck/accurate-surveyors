@@ -1,0 +1,586 @@
+/* Thrive Security - Modern Dependencies UI */
+
+/* Import CSS variables from admin theme */
+@import url('thrive-admin.css');
+
+/* Tabbed Interface Styles */
+.nav-tab-wrapper {
+    border-bottom: 2px solid var(--thrive-gray-200);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--thrive-border-radius-lg) var(--thrive-border-radius-lg) 0 0;
+    overflow: hidden;
+}
+
+.nav-tab {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--thrive-gray-600);
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-tab::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tab:hover {
+    color: var(--thrive-primary);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.nav-tab-active {
+    color: var(--thrive-primary);
+    background: rgba(99, 102, 241, 0.1);
+    font-weight: 600;
+}
+
+.nav-tab-active::before {
+    background: linear-gradient(90deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+}
+
+.nav-tab-active:hover {
+    background: rgba(99, 102, 241, 0.15);
+}
+
+/* Tab Content Styles */
+.thrive-tab-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 var(--thrive-border-radius-lg) var(--thrive-border-radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--thrive-gray-200);
+    border-top: none;
+}
+
+.thrive-tab-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.thrive-tab-content h2::before {
+    content: '';
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(135deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+    border-radius: 2px;
+}
+
+.thrive-tab-content p {
+    color: var(--thrive-gray-600);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Tab-specific styles */
+.thrive-required-row {
+    border-left: 4px solid #10B981;
+}
+
+.thrive-recommended-row {
+    border-left: 4px solid #3B82F6;
+}
+
+.thrive-blocked-row {
+    border-left: 4px solid #EF4444;
+}
+
+.thrive-blocked-status {
+    color: #EF4444;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: var(--thrive-border-radius);
+    font-size: 0.875rem;
+}
+
+/* Background Status Widget Styles */
+.thrive-background-status-widget {
+    margin-bottom: 2rem;
+}
+
+.thrive-status-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--thrive-border-radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--thrive-gray-200);
+    box-shadow: var(--thrive-shadow-md);
+}
+
+.thrive-status-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.thrive-status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--thrive-gray-100);
+}
+
+.thrive-status-item:last-child {
+    border-bottom: none;
+}
+
+.thrive-status-label {
+    font-weight: 500;
+    color: var(--thrive-gray-600);
+}
+
+.thrive-status-value {
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+}
+
+.thrive-status-active {
+    color: #10B981;
+}
+
+.thrive-status-inactive {
+    color: #EF4444;
+}
+
+.thrive-status-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thrive-gray-100);
+}
+
+.thrive-stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: var(--thrive-border-radius);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.thrive-stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--thrive-primary);
+    margin-bottom: 0.25rem;
+}
+
+.thrive-stat-label {
+    font-size: 0.875rem;
+    color: var(--thrive-gray-600);
+    font-weight: 500;
+}
+
+.thrive-status-errors {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thrive-gray-100);
+}
+
+.thrive-status-errors h4 {
+    margin: 0 0 0.5rem 0;
+    color: #EF4444;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.thrive-status-errors ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+.thrive-status-errors li {
+    font-size: 0.875rem;
+    color: var(--thrive-gray-600);
+    margin-bottom: 0.25rem;
+}
+
+/* Dependencies Page Specific Styles */
+#thrive-dependencies {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#thrive-dependencies .thrive-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-radius: var(--thrive-border-radius-lg);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+#thrive-dependencies .thrive-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#thrive-dependencies .thrive-header h1::before {
+    content: '📦';
+    font-size: 2rem;
+    -webkit-text-fill-color: initial;
+}
+
+#thrive-dependencies .thrive-header p {
+    font-size: 1.1rem;
+    color: var(--thrive-gray-600);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Modern Table Design */
+#thrive-dependencies table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--thrive-border-radius-lg);
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: var(--thrive-shadow-lg);
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#thrive-dependencies table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+}
+
+#thrive-dependencies thead {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+#thrive-dependencies th {
+    padding: 1.5rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--thrive-gray-200);
+}
+
+#thrive-dependencies td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--thrive-gray-100);
+    vertical-align: middle;
+}
+
+#thrive-dependencies tr:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+#thrive-dependencies tr:last-child td {
+    border-bottom: none;
+}
+
+/* Plugin/Theme Status Indicators */
+.thrive-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.thrive-status-indicator::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.thrive-status-active {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    color: var(--thrive-success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.thrive-status-inactive {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(75, 85, 99, 0.1) 100%);
+    color: var(--thrive-gray-500);
+    border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.thrive-status-missing {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    color: var(--thrive-danger);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.thrive-status-blocked {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+    color: var(--thrive-warning);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Modern Buttons */
+#thrive-dependencies .button {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--thrive-border-radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--thrive-transition);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: var(--thrive-shadow);
+    min-width: 120px;
+    justify-content: center;
+}
+
+#thrive-dependencies .button-primary {
+    background: linear-gradient(135deg, var(--thrive-primary) 0%, var(--thrive-primary-dark) 100%);
+    color: white;
+}
+
+#thrive-dependencies .button-primary:hover {
+    background: linear-gradient(135deg, var(--thrive-primary-dark) 0%, #4338ca 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--thrive-shadow-lg);
+}
+
+#thrive-dependencies .button-secondary {
+    background: linear-gradient(135deg, var(--thrive-gray-100) 0%, var(--thrive-gray-200) 100%);
+    color: var(--thrive-gray-700);
+    border: 1px solid var(--thrive-gray-300);
+}
+
+#thrive-dependencies .button-secondary:hover {
+    background: linear-gradient(135deg, var(--thrive-gray-200) 0%, var(--thrive-gray-300) 100%);
+    transform: translateY(-1px);
+    box-shadow: var(--thrive-shadow-md);
+}
+
+#thrive-dependencies .button-danger {
+    background: linear-gradient(135deg, var(--thrive-danger) 0%, #dc2626 100%);
+    color: white;
+}
+
+#thrive-dependencies .button-danger:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--thrive-shadow-lg);
+}
+
+#thrive-dependencies .button-success {
+    background: linear-gradient(135deg, var(--thrive-success) 0%, #059669 100%);
+    color: white;
+}
+
+#thrive-dependencies .button-success:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--thrive-shadow-lg);
+}
+
+/* Plugin/Theme Information */
+.thrive-plugin-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thrive-plugin-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--thrive-border-radius);
+    background: linear-gradient(135deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.thrive-plugin-details h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+}
+
+.thrive-plugin-details p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--thrive-gray-600);
+}
+
+/* Action Buttons Container */
+.thrive-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Bulk Actions */
+.thrive-bulk-actions {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--thrive-border-radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--thrive-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.thrive-bulk-actions h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.thrive-bulk-actions h3::before {
+    content: '⚡';
+    font-size: 1.1rem;
+}
+
+.thrive-bulk-actions .button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Loading States */
+.thrive-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.thrive-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--thrive-primary);
+    border-radius: 50%;
+    animation: thrive-spin 1s linear infinite;
+}
+
+/* Toast Notifications */
+.toastify {
+    font-size: 14px;
+    border-radius: var(--thrive-border-radius);
+    box-shadow: var(--thrive-shadow-lg);
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+}
+
+.toastify.toastify-success {
+    background: linear-gradient(135deg, var(--thrive-success) 0%, #059669 100%);
+}
+
+.toastify.toastify-error {
+    background: linear-gradient(135deg, var(--thrive-danger) 0%, #dc2626 100%);
+}
+
+.toastify.toastify-warning {
+    background: linear-gradient(135deg, var(--thrive-warning) 0%, #d97706 100%);
+}
+
+.toastify.toastify-info {
+    background: linear-gradient(135deg, var(--thrive-info) 0%, #2563eb 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #thrive-dependencies {
+        padding: 1rem;
+    }
+    
+    #thrive-dependencies .thrive-header h1 {
+        font-size: 2rem;
+    }
+    
+    #thrive-dependencies table {
+        font-size: 0.9rem;
+    }
+    
+    #thrive-dependencies th,
+    #thrive-dependencies td {
+        padding: 1rem 0.5rem;
+    }
+    
+    .thrive-actions {
+        flex-direction: column;
+    }
+    
+    .thrive-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .thrive-plugin-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

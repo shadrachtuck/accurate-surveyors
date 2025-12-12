@@ -1,0 +1,1633 @@
+/*
+
+Theme Name: Accurate Surveyors 2026
+Template: blockchain
+Description: Custom child theme for Accurate Surveying
+Version: 1.0
+
+*/
+
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/* Font declarations - paths relative to /css/ directory */
+@font-face {
+  font-family: "Sansation Regular";
+  src: url("../assets/fonts/sansation/Sansation-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansation Bold";
+  src: url("../assets/fonts/sansation/Sansation-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* BebasNeue Font declarations */
+@font-face {
+  font-family: "BebasNeue Regular";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue Bold";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue Light";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue Book";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Book.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue Thin";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Helvetica Neue LT Std Font declarations */
+@font-face {
+  font-family: "Helvetica Neue LT Std Condensed";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-Cn.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Bold Condensed";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-BdCn.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Medium Condensed";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-MdCn.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Italic Condensed";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-CnO.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Bold Condensed";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-BdCnO.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Medium Condensed Italic";
+  src: url("../assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-MdCnO.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* === COLOR VARIABLES === */
+:root {
+  --primary-black: #000000;
+  --primary-blue: #4a7ba7;
+  --primary-green: #9dc08b;
+  --dark-footer: #2c3e50;
+  --text-dark: #333333;
+  --text-white: #ffffff;
+  --gray-card: rgba(128, 128, 128, 0.6);
+}
+
+/* === GLOBAL TYPOGRAPHY === */
+body,
+body.page,
+body.single,
+body.archive,
+body.blog {
+  font-family: "BebasNeue Regular", sans-serif !important;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+p {
+  font-family: "Helvetica Neue LT Std Condensed", sans-serif !important;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-white);
+}
+.main {
+  padding: 2% 0px !important;
+}
+
+.widget-section-hero .section-subtitle {
+  font-weight: 600;
+  color: var(--primary-black);
+}
+.entry-content p {
+  font-weight: 300;
+  color: var(--primary-black);
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+.entry-title,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.widget-title,
+.site-title {
+  font-family: "Sansation Bold", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+} */
+
+.entry-item-title {
+  font-size: unset;
+  font-weight: unset;
+  margin-bottom: unset;
+  line-height: unset;
+}
+a {
+  -webkit-transition: color .18s ease, background-color .18s ease, border-color .18s ease;
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease;
+  color: var(--text-black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 1px dotted var(--primary-blue);
+}
+
+.section-subtitles {
+  font-family: "Helvetica Neue LT Std Medium Condensed", sans-serif;
+}
+
+/* === HEADER === */
+.header-overlaid {
+  position: unset;
+  /* width: 100%; */
+}
+.top-contact-bar {
+  background: var(--primary-black);
+  color: var(--text-white);
+  text-align: center;
+  font-family: "BebasNeue Bold", sans-serif !important;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.navigation-main-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2%;
+}
+.menu-item {
+  font-family: "Helvetica Neue LT Std Medium Condensed", sans-serif !important;
+  font-size: 1em !important;
+}
+.navigation-main > li > a {
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+.over-background .navigation-main > li > a {
+  color: var(--primary-black) !important;
+}
+.navigation-main .nav-button:last-child > a {
+  color: var(--text-white) !important;
+}
+.mobile-nav-trigger {
+  color: var(--primary-black) !important;
+  font-size: xx-large;
+}
+
+.logo img,
+.custom-logo,
+.site-branding img {
+  max-height: 90px;
+  width: auto;
+  height: auto;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-navigation a {
+  color: var(--text-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* .navigation-main .nav-button > a {
+  color: 2px solid #019afe;
+  border-radius: 30px;
+  padding: 12px 30px;
+  margin-left: 10px;
+  font-size: 12px;
+} */
+
+/* === DEFAULT BUTTON STYLE === */
+.request-proposal-btn,
+button,
+input[type="submit"],
+input[type="button"],
+.button,
+a.button,
+.navigation-main .nav-button > a,
+.bt,
+.btn-transparent,
+.btn-default {
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+  padding: 12px 35px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  font-family: "BebasNeue Bold", sans-serif;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.blockchain-slick-slider .slick-dots .slick-active button, button:before, button:after {
+  background-color: var(--primary-blue) !important;
+  box-shadow: 0 0 10px rgba(13, 63, 47, 0.7) !important;
+  }
+
+
+/* Scalloped border effect using pseudo-elements with radial pattern */
+.request-proposal-btn::before,
+button::before,
+input[type="submit"]::before,
+input[type="button"]::before,
+.button::before,
+a.button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  right: -2px;
+  height: 6px;
+  background: repeating-radial-gradient(
+      circle at 0 0,
+      transparent,
+      transparent 6px,
+      rgba(74, 123, 167, 0.8) 6px,
+      rgba(74, 123, 167, 0.8) 8px
+    ),
+    linear-gradient(135deg, #4a7ba7 0%, #3a6b96 100%);
+  background-size: 12px 6px, 100% 100%;
+  border-radius: 8px 8px 0 0;
+  z-index: -1;
+}
+
+.request-proposal-btn::after,
+button::after,
+input[type="submit"]::after,
+input[type="button"]::after,
+.button::after,
+a.button::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  right: -2px;
+  height: 6px;
+  background: repeating-radial-gradient(
+      circle at 0 6px,
+      transparent,
+      transparent 6px,
+      rgba(58, 107, 150, 0.8) 6px,
+      rgba(58, 107, 150, 0.8) 8px
+    ),
+    linear-gradient(135deg, #4a7ba7 0%, #3a6b96 100%);
+  background-size: 12px 6px, 100% 100%;
+  border-radius: 0 0 8px 8px;
+  z-index: -1;
+}
+
+/* Hover effect */
+.request-proposal-btn:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.button:hover,
+a.button:hover,
+.navigation-main .nav-button > a:hover,
+.navigation-main .nav-button:last-child > a:hover,
+.btn-transparent:hover {
+  background: linear-gradient(135deg, #5a8bb7 0%, #4a7ba7 100%);
+  box-shadow: 0 6px 20px rgba(74, 123, 167, 0.4);
+  transform: translateY(-2px);
+}
+
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a {
+  border-color: var(--primary-green);
+}
+
+/* Active/pressed effect */
+.request-proposal-btn:active,
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.button:active,
+a.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(74, 123, 167, 0.3);
+}
+
+/* === HERO SECTION === */
+
+h2.page-hero-title {
+  font-family: "BebasNeue Bold", sans-serif !important;
+  text-align: center;
+}
+.page-hero{
+  /* Parallax effect - fixed attachment creates scrolling parallax */
+  background-attachment: fixed;
+  /* Base gradient background */
+  background-color: #1e2e3a;
+  /* Layered backgrounds: image on top, gradient beneath */
+  background-image: 
+    url('../assets/images/nav-star.svg'),  /* Primary image with parallax */
+    linear-gradient(
+      to right,
+      #000 15%,
+      #191a1b 40%,
+      var(--primary-blue),
+      var(--primary-green)
+    ); /* Gradient fallback beneath image */
+  /* Image sizing - adjust to fit your needs */
+  background-size: 
+    cover,  /* Image: contain to show full logo */
+    cover;    /* Gradient: cover the full area */
+  background-position: 
+    bottom center,  /* Image position */
+    center center;  /* Gradient position */
+  background-repeat: 
+    no-repeat,  /* Image: no repeat */
+    no-repeat;  /* Gradient: no repeat */
+  /* Ensure smooth parallax scrolling */
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  background: unset !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blockchain-slick-slider .slick-dots .slick-active button, button:before, button:after {
+  background-color: var(--primary-green) !important;
+}
+
+/* === MENUS === */
+#menu-services li a,
+.sidebar li a,
+.mm-listview a {
+  background: transparent;
+  padding: 20px 0px 5px 0px;
+  border-bottom: 1px solid var(--primary-black);
+  color: var(--primary-blue);
+  font-family: "Helvetica Neue LT Std Condensed", sans-serif !important;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  
+}
+.sidebar a:hover,
+#menu-services li a:hover,
+.mm-listview a:hover {
+  color: var(--primary-green) !important;
+  transform: translateY(-5px);
+}
+
+.widget_section {
+  padding: unset !important;
+}
+.widget_nav_menu > div > ul > li:first-child > a {
+  padding-top: 0 !important;
+}
+
+.widget_nav_menu a:hover {
+  background-color: transparent !important;
+}
+
+.widget_nav_menu .current-menu-item > a {
+  color: var(--text-green) !important;
+  background-color: transparent !important;
+}
+
+#mobilemenu {
+  background-color: var(--text-white);
+  background-image: 
+    url('../assets/images/nav-star.svg');
+    background-size: 
+    contain,
+    contain;    /* Gradient: cover the full area */
+  background-position: 
+    bottom center,  /* Image position */
+    center center;  /* Gradient position */
+  background-repeat: 
+    no-repeat,  /* Image: no repeat */
+    no-repeat;  /* Gradient: no repeat */
+    width: 80%;
+  margin-bottom: 100px;
+  /* Ensure smooth parallax scrolling */
+  position: absolute;
+  overflow: hidden;
+}
+.mm-menu .mm-navbar > *, .mm-menu .mm-navbar a {
+  color: var(--primary-black);
+  font-weight: 800;
+}
+.mm-listview > li > a, .mm-listview > li > span {
+  text-overflow: unset !important;
+  white-space:  unset !important;
+  overflow:  unset !important;
+  color: var(--primary-blue) !important;
+  display: block;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+}
+.mm-listview > li, .mm-listview > li:after, .mm-listview > li .mm-next, .mm-listview > li .mm-next:before {
+  border-color: unset !important;
+  border: unset !important;
+}
+
+.mm-navbar {
+  border-color: unset !important;
+}
+/* === SERVICE CARDS === */
+
+.ci-grid-animate {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+.ci-grid-animate  img{
+border-radius: 15px;
+}
+.ci-grid-animate .entry-item-title a {
+  font-family: "BebasNeue Regular", sans-serif !important;
+  font-size: 1em;
+  color: var(--text-white) !important;
+  text-align: center;
+  margin: 0;
+}
+.ci-grid-animate .entry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.entry-item-read-more {
+  display: none;
+}
+.entry-item-read-more .fa {
+  display: none;
+}
+
+.ci-grid-animate:hover .entry-item-read-more {
+  display: inline-block !important;
+  color: var(--text-white) !important;
+}
+
+/* Hide old Learn More for service cards - use overlay instead */
+.services .ci-grid-animate:hover .entry-item-read-more,
+.services .service-card .entry-item-content .entry-item-read-more {
+  display: none !important;
+}
+
+.ci-grid-animate:hover .entry-item-read-more .fa {
+  display: inline-block !important;
+  margin-left: 10px;
+  color: var(--text-white) !important;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1.1em;
+  position: relative;
+  top: 1px;
+}
+
+.services .ci-grid-animate:hover {
+  transform: translateY(-5px);
+}
+
+.ci-grid-animate  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure service card images are consistent size - will be set more specifically below */
+
+.services .ci-grid-animate .entry-item-title {
+  background: transparent;
+  color: var(--text-white);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ci-grid-animate .entry-item-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column-reverse;
+  align-content: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Hide the old Learn More link for service cards with overlay */
+.services .ci-grid-animate:hover .service-card .entry-item-content .entry-item-read-more,
+.services .service-card .entry-item-content .entry-item-read-more {
+  display: none !important;
+}
+
+/* Ensure overlay Learn More shows on hover */
+.services .ci-grid-animate .service-card-overlay .entry-item-read-more,
+.services .service-card-overlay .entry-item-read-more {
+  display: inline-block !important;
+}
+
+/* === SHARED CARD STYLES === */
+
+/* Shared card container styles */
+.team .entry-item.team-card,
+.team .ci-grid-animate .entry-item.team-card,
+.services .entry-item.service-card,
+.services .ci-grid-animate .entry-item.service-card {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative;
+  gap: 10px;
+  margin-bottom: 30px;
+  text-align: left !important;
+}
+
+/* Shared image wrapper base styles */
+.team .team-card-image-wrapper,
+.services .service-card-image-wrapper,
+.services .ci-grid-animate .service-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* Shared image styles - auto height to match team cards */
+.team .team-card-image-wrapper img,
+.services .service-card-image-wrapper img,
+.services .ci-grid-animate .service-card-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+/* Shared entry-item-thumb styles */
+.team .team-card-image-wrapper .entry-item-thumb,
+.services .service-card-image-wrapper .entry-item-thumb,
+.services .ci-grid-animate .service-card-image-wrapper .entry-item-thumb {
+  margin-bottom: 0px !important;
+}
+
+/* Shared overlay base styles */
+.team .team-card-overlay,
+.services .service-card-overlay,
+.services .ci-grid-animate .service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 15px;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Shared overlay hover states */
+.team .team-card:hover .team-card-overlay,
+.services .service-card:hover .service-card-overlay,
+.services .ci-grid-animate:hover .service-card-overlay,
+.services .service-card-image-wrapper:hover .service-card-overlay,
+.services .ci-grid-animate:hover .service-card-image-wrapper .service-card-overlay,
+.services .ci-grid-animate:hover .service-card .service-card-overlay {
+  opacity: 1 !important;
+}
+
+/* Shared overlay Learn More link styles */
+.team .team-card-overlay .entry-item-read-more,
+.services .service-card-overlay .entry-item-read-more,
+.services .ci-grid-animate .service-card-overlay .entry-item-read-more {
+  display: inline-block !important;
+  color: var(--text-white) !important;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "BebasNeue Bold", sans-serif;
+  pointer-events: auto;
+}
+
+.services .service-card-overlay .entry-item-read-more {
+  pointer-events: auto;
+}
+
+/* Shared overlay icon styles */
+.team .team-card-overlay .entry-item-read-more .fa,
+.services .service-card-overlay .entry-item-read-more .fa,
+.services .ci-grid-animate .service-card-overlay .entry-item-read-more .fa {
+  display: inline-block !important;
+  margin-left: 10px;
+  color: var(--text-white) !important;
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  top: 1px;
+}
+
+/* Shared card content base styles */
+.team .team-card-content,
+.services .service-card-content {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* Team card content has gap for name/title spacing */
+.team .team-card-content {
+  gap: 8px;
+}
+
+/* Shared card name base styles */
+.team .team-card-name,
+.services .service-card-name {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  width: 100%;
+}
+
+/* Shared card name link styles */
+.team .team-card-name a,
+.services .service-card-name a {
+  color: var(--primary-black) !important;
+  font-family: "BebasNeue Regular", sans-serif !important;
+  font-size: 20px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.5px !important;
+  text-align: left !important;
+  display: block !important;
+  width: 100%;
+}
+
+.team .team-card-name a:hover,
+.services .service-card-name a:hover {
+  color: var(--primary-blue) !important;
+}
+
+/* === OVERRIDE CI-GRID-ANIMATE STYLES === */
+
+/* Override ci-grid-animate styles for team cards */
+.team .ci-grid-animate .team-card .entry-item-content {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  bottom: auto !important;
+  text-align: left !important;
+}
+
+/* Override ci-grid-animate styles for service cards */
+.services .entry-item.service-card .entry-item-content,
+.services .ci-grid-animate .entry-item.service-card .entry-item-content {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  bottom: auto !important;
+}
+
+/* === TEAM-SPECIFIC STYLES === */
+
+/* Team card title/role */
+.team .team-card-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--primary-black) !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.4 !important;
+  font-family: inherit !important;
+  text-align: left !important;
+  width: 100%;
+}
+
+/* Team card title/role */
+.team .team-card-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--primary-black) !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.4 !important;
+  font-family: inherit !important;
+  text-align: left !important;
+  width: 100%;
+}
+
+.learn-more-btn:hover {
+  background: var(--text-white);
+  color: var(--text-white);
+}
+
+form.customize-unpreviewable,
+form.customize-unpreviewable input,
+form.customize-unpreviewable select,
+form.customize-unpreviewable button,
+a.customize-unpreviewable,
+area.customize-unpreviewable {
+  cursor: default !important;
+}
+
+/* Target the row inside footer for flex display */
+.footer-column-layout #page > footer > div.footer-widgets {
+  display: inline-flex !important;
+  flex-wrap: nowrap !important;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.footer-copy {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.bottom-info p,
+.bottom-info-text {
+  display: block !important;
+  text-align: center !important;
+  font-family: "BebasNeue Bold", sans-serif !important;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.bottom-menu {
+  display: flex;
+  align-items: end;
+  font-family: "Helvetica Neue LT Std Condensed", sans-serif !important;
+  font-size: 0.9em;
+  line-height: 1.7;
+  text-transform: uppercase;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.bottom-menu a,
+.bottom-info a {
+  color: var(--text-white);
+  text-decoration: none;
+  display: inline;
+}
+
+.wp-block-heading
+  .has-text-align-center
+  .has-text-color
+  .has-link-color
+  .has-medium-font-size
+  h4 {
+  margin-bottom: unset !important;
+}
+
+.bottom-menu a:hover,
+.bottom-info a:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* === HOMEPAGE CUSTOM SECTIONS === */
+
+/* === WIDGETS STYLING === */
+/* Style entry-item container for overlay positioning - ONLY for main widget sections */
+/* Footer widgets are explicitly excluded via footer overrides below */
+/* Targeting .widget-section .row-items .entry-item to match actual HTML structure */
+.widget-section .row-items .entry-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Ensure images use relative positioning and fill the container - ONLY for main widget sections */
+.widget-section .row-items .entry-item-thumb {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+.widget-section .row-items .entry-item-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+/* Style section subtitle - targeting p.section-subtitle inside .section-heading */
+.section-heading .section-subtitle,
+.section-subtitle {
+  font-family: "Helvetica Neue LT Std Medium Condensed", sans-serif !important;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+  color: var(--primary-black);
+}
+
+/* Dark background bar overlay for titles - CSS only, no image - ONLY for main widget sections entry-items */
+.widget-section .row-items 
+.entry-item-title {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--text-white);
+  padding: 5px 5px 0px 5px;
+  margin: 0;
+  font-family: "Helvetica Neue LT Std Bold Condensed", sans-serif !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+
+.entry-item {
+  margin-bottom: unset;
+}
+
+/* Hide "Learn More" button in widget section entry-items */
+.widget-section .row-items .entry-item-read-more {
+  display: none;
+}
+
+.widget-section .row-items .entry-item-title a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.widget-section .row-items .entry-item-title a:hover {
+  color: var(--text-white);
+  opacity: 0.9;
+}
+
+.widget-section .row-items .entry-item:hover .entry-item-title {
+  background: rgba(0, 0, 0, 0.65);
+}
+/* === FOOTER === */
+/* Target footer element with our custom class for better specificity */
+footer.footer.as26-footer-display-override,
+.footer.as26-footer-display-override {
+  background: linear-gradient(
+    to right,
+    #000 15%,
+    #191a1b 40%,
+    #1e2e3a,
+    #3a5a7a,
+    #4a6b8a 100%
+  ) !important;
+  color: var(--text-white) !important;
+}
+
+.footer .widget-title,
+.widget p {
+  color: currentColor;
+  border-color: #72a779;
+  border-width: 0.5px;
+  font-weight: 100;
+  font-size: 0.9em;
+  font-family: "Helvetica Neue LT Std Condensed", sans-serif !important;
+  padding-bottom: unset;
+}
+
+.footer-copy .text-lg-left {
+  font-family: "BebasNeue Regular", sans-serif !important;
+}
+
+.footer .item-btn {
+  background-color: transparent;
+  padding: unset;
+}
+/* Explicitly reset footer entry-item styles to prevent interference from main widget section styles */
+/* Using higher specificity to override .widget-section .row-items styles */
+footer .footer-widgets .entry-item,
+.footer .footer-widgets .entry-item,
+footer .widget .entry-item,
+.footer .widget .entry-item {
+  display: inline-flex !important;
+  /* position: static !important; */
+  overflow: visible !important;
+  border-radius: 0 !important;
+}
+
+footer .footer-widgets .entry-item-title,
+.footer .footer-widgets .entry-item-title,
+footer .widget .entry-item-title,
+.footer .widget .entry-item-title {
+  position: static !important;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 0 0 10px !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: auto !important;
+}
+
+footer .footer-widgets .entry-item-title a,
+.footer .footer-widgets .entry-item-title a,
+footer .widget .entry-item-title a,
+.footer .widget .entry-item-title a {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+footer .footer-widgets .entry-item-thumb,
+.footer .footer-widgets .entry-item-thumb,
+footer .widget .entry-item-thumb,
+.footer .widget .entry-item-thumb {
+  position: static !important;
+  overflow: visible !important;
+  margin-bottom: 15px !important;
+}
+
+.footer-widgets {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px 30px;
+  color: var(--text-white);
+}
+
+.footer-column-layout {
+  padding: 0 8%;
+}
+
+.footer-nav-star {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: -90px;
+  top: -70px;
+  pointer-events: none;
+  width: 40%;
+}
+
+.footer-nav-star img {
+  max-width: 70%;
+  height: auto;
+  pointer-events: none;
+  position: absolute;
+}
+
+.footer-brand-inline {
+  width: 100%;
+  display: inline-grid;
+  align-items: end;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  position: relative;
+}
+
+.footer-logo-stack {
+  width: 70%;
+  height: auto;
+  margin-bottom: -16px;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer-social-icons-links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+
+.footer-social-icons a {
+  display: inline-flex;
+  width: 28px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.footer-social-icons p {
+  font-family: "BebasNeue Bold", sans-serif !important;
+  color: var(--text-white);
+  font-size: 0.8em;
+  margin: 0px 1% 0px 0px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.footer-logo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-tagline-center {
+  text-align: center !important;
+  font-family: "Sansation Regular", sans-serif;
+  font-size: 1em;
+  color: var(--primary-green);
+  text-transform: uppercase;
+}
+
+.bottom-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-tagline-top {
+  text-align: center !important;
+  font-family: "Sansation Regular", sans-serif;
+  font-size: 1em;
+  color: var(--text-white);
+  margin-bottom: 5%;
+}
+
+.footer-tagline-top a {
+  color: var(--primary-green) !important;
+  text-decoration: none;
+}
+
+.footer-brand-inline::after {
+  content: "";
+  flex: 1;
+}
+
+.footer-widgets .widget,
+.footer-widgets .widget * {
+  color: var(--text-white) !important;
+}
+
+.footer-widgets a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.footer-widgets a:hover {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .bottom-info p {
+    font-size: 0.8em;
+  }
+  .bottom-menu a {
+    font-size: 0.7em !important;
+  }
+  .footer-social-icons a {
+    display: inline-flex;
+    width: 24px;
+  }
+  .footer-logo-stack {
+    margin-bottom: -25px;
+  }
+  .footer-social-icons p {
+    margin: 0px 1% 0px 0px;
+  }
+  /* .widget-section {
+    padding: 80px 30px;
+  } */
+  .widget-section .row-items {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 55%;
+    margin-left: -50px;
+  }
+
+}
+
+/* === DESKTOP/FULL-SCREEN STYLES === */
+/* Apply max-height only for full-screen/desktop breakpoints (above 768px) */
+@media (min-width: 769px) {
+  
+  .widget-section .row-items .entry-item-thumb img {
+   height: 180px;
+    object-fit: cover;
+  }
+  .footer-logo-stack {
+    margin-bottom: -16px;
+  }
+  .footer-social-icons p {
+    margin: 0px 2% 0px 0px;
+  }
+
+  .page-hero-slideshow {
+    padding: 20px 0px !important;
+}
+
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 990px) {
+  footer.footer.as26-footer-display-override,
+  .footer.as26-footer-display-override {
+    background: linear-gradient(
+      to right,
+      #090909,
+      #1e2e3a,
+      #4a6b8a 100%
+    ) !important;
+  }
+  .main .widget-section .col-sm-6, .col-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: unset;
+    flex: unset;
+    max-width: 100%;
+    /* padding-right: unset;
+    padding-left: unset; */
+    min-width: 100%;
+    height: auto;
+  }
+
+  .main .widget-section .row-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: unset;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main .widget-section .row-items .entry-item-thumb img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer-logo-stack {
+    max-width: 30%;
+    margin-bottom: 5px;
+  }
+  .bottom-info p {
+    font-size: 0.8em;
+  }
+
+  .footer-social-icons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer-social-icons-links {
+    justify-content: center;
+  }
+
+  .footer-social-icons p {
+    margin: 0px 2.5% 0px 0px;
+  }
+
+  .footer-nav-star {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: -50px;
+    top: 460px;
+    pointer-events: none;
+    width: 50%;
+  }
+
+  .footer-brand-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .main .widget-sections .widget-section .row-items .entry-item-title {
+    padding: 10px 10px 5px 10px;
+    font-size: 1em;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .services-sidebar {
+    border-right: none;
+    border-bottom: 3px solid var(--primary-blue);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .main-navigation {
+    display: none;
+    /* Show hamburger menu instead */
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom-info p {
+    font-size: 0.6em;
+  }
+  .footer-logo-stack {
+    max-width: 50%;
+  }
+  .footer-tagline-center {
+    font-size: 0.7em;
+  }
+  .footer-social-icons p {
+    font-size: 0.6em;
+  }
+  .footer-social-icons a {
+    display: inline-flex;
+    width: 18px;
+  }
+  .footer-nav-star {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: -50px;
+    top: 460px;
+    pointer-events: none;
+    width: 70%;
+  }
+  .footer-social-icons p {
+    margin: 0px 5% 0px 0px;
+  }
+
+  .mobile-nav-trigger {
+    color: var(--primary-black) !important;
+    font-size: x-large;
+  }
+  .page-hero-lg .page-hero-title {
+    font-size: 1.5em !important;
+  }
+  .page-hero-subtitle {
+    font-size: 12px;
+  }
+  .page-hero .btn {
+    height: auto;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+}
+
+/* Style contact form submit button to match request-proposal-btn */
+form input[type="submit"],
+form button[type="submit"],
+form input[type="button"],
+form .button {
+  background-color: var(--primary-blue) !important;
+  color: var(--text-white) !important;
+  padding: 12px 35px !important;
+  border-radius: 16px !important;
+  text-transform: uppercase !important;
+  font-family: "BebasNeue Bold", sans-serif !important;
+  font-size: 18px !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+}
+
+/* Remove decorative borders from contact form submit buttons */
+form input[type="submit"]::before,
+form input[type="submit"]::after,
+form button[type="submit"]::before,
+form button[type="submit"]::after,
+form input[type="button"]::before,
+form input[type="button"]::after,
+form .button::before,
+form .button::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Apply hover effect matching request-proposal-btn */
+form input[type="submit"]:hover,
+form button[type="submit"]:hover,
+form input[type="button"]:hover,
+form .button:hover {
+  background: linear-gradient(135deg, #5a8bb7 0%, #4a7ba7 100%) !important;
+  box-shadow: 0 6px 20px rgba(74, 123, 167, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Apply active effect matching request-proposal-btn */
+form input[type="submit"]:active,
+form button[type="submit"]:active,
+form input[type="button"]:active,
+form .button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 10px rgba(74, 123, 167, 0.3) !important;
+}
+
+/* Hide repeated description above navigation bar on services page */
+.services .entry-content,
+.page-template-listing-blockchain-service .entry-content,
+body.page-template-listing-blockchain-service .main .entry-content {
+  display: none !important;
+}
+
+/* Hide the text widget description in the sidebar above navigation menu */
+.sidebar .widget_text,
+.sidebar .widget_block.widget_text,
+.sidebar aside#block-15,
+.sidebar .widget_text:first-of-type {
+  display: none !important;
+}
+
+/* Ensure team cards display properly in grid */
+.team .row-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.team .row-items > div {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Ensure 4 cards per row on large screens, adjust as needed */
+@media (min-width: 1200px) {
+  .team .row-items .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* === SINGLE TEAM MEMBER LAYOUT === */
+/* Hide default post header for team members */
+.single-team-member .entry-header {
+  display: none;
+}
+
+.single-team-member .single-team-layout {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-team-member .single-team-layout {
+    gap: 35px;
+  }
+}
+
+/* Left Column: Profile Image, Name, Title */
+.single-team-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-team-image {
+  margin-bottom: 20px;
+}
+
+.single-team-image img.team-profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.single-team-name {
+  font-family: "BebasNeue Regular", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--primary-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.single-team-title {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--primary-black);
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+/* Middle Column: Bio Content */
+.single-team-middle {
+  align-self: start;
+}
+
+.single-team-bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary-black) !important;
+  font-weight: 300;
+}
+
+.single-team-bio p {
+  margin-bottom: 15px;
+  color: var(--primary-black) !important;
+}
+
+.single-team-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.single-team-bio * {
+  color: var(--primary-black) !important;
+}
+
+.single-team-bio a {
+  color: var(--primary-black) !important;
+  text-decoration: underline;
+}
+
+.single-team-bio a:hover {
+  color: var(--primary-blue) !important;
+}
+
+/* Right Column: Services List */
+.single-team-right {
+  align-self: start;
+}
+
+.single-team-services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.single-team-service-item {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-black);
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--primary-black);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.single-team-service-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .single-team-member .single-team-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .single-team-left,
+  .single-team-middle,
+  .single-team-right {
+    width: 100%;
+  }
+  
+  .single-team-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

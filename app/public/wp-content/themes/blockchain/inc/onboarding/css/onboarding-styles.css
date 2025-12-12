@@ -1,0 +1,79 @@
+.blockchain-onboarding-wrap .wp-badge {
+  background: #fff;
+  padding: 50px 0;
+  height: auto;
+}
+
+.blockchain-onboarding-wrap .wp-badge img {
+  width: 80px;
+  position: relative;
+  left: -5px;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box {
+  background: #fff;
+  border-left: solid 4px #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px 15px 5px;
+  margin: 15px 0 30px 0;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box .box-title {
+  margin: 0 0 5px 0;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box .box-description {
+  font-size: 13px;
+  margin: 0;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box-warning {
+  border-left: solid 4px red;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box-info {
+  border-left: solid 4px orange;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-box-success {
+  border-left: solid 4px green;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table tr {
+  border-bottom: solid 1px #ccc;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table tr:nth-child(even) .blockchain-onboarding-pro {
+  background: #9dba6f;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table th {
+  font-weight: bold;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table th, .blockchain-onboarding-wrap .blockchain-onboarding-table td {
+  padding: 15px 8px;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table .blockchain-onboarding-col {
+  width: 150px;
+  text-align: center;
+}
+
+.blockchain-onboarding-wrap .blockchain-onboarding-table .blockchain-onboarding-pro {
+  background: #92af64;
+  color: #fff;
+}
+
+.blockchain-onboarding-wrap a.button-action {
+  margin: 0 auto;
+}

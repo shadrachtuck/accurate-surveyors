@@ -1,0 +1,62 @@
+# WordPress
+app/public/wp-config.php
+app/public/.htaccess
+app/public/wp-content/uploads/
+app/public/wp-content/upgrade/
+app/public/wp-content/backup-db/
+app/public/wp-content/advanced-cache.php
+app/public/wp-content/wp-cache-config.php
+app/public/wp-content/cache/
+app/public/wp-content/debug.log
+
+# Local by Flywheel
+conf/
+logs/
+*.log
+*.sql
+*.sqlite
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+.project
+.idea
+*.sublime-*
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if any)
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Debug files
+.cursor/
+debug.log
+*.log
+
+# Vercel (if not using)
+.vercel
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

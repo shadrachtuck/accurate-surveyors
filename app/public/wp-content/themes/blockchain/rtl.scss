@@ -1,0 +1,386 @@
+@import 'css/inc/variables';
+@import 'css/inc/mixins/grid';
+@import 'css/inc/mixins/mixins';
+
+/*--------------------------------------------------------------
+# Normalization
+--------------------------------------------------------------*/
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body {
+  font-family: sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+ul,
+ol {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+select {
+	background-position: left .75rem center;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.head-intro-info {
+	span {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+
+	i {
+		margin-right: 0;
+		margin-left: 5px;
+	}
+}
+
+.mobile-nav-trigger {
+	float: left;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navigation-main-right {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+/* Buttons
+=================================== */
+.btn,
+.button,
+.woocommerce-Button,
+.comment-reply-link,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+	.fa {
+		margin-right: 0;
+		margin-left: 5px;
+	}
+}
+
+/* Hero Areas
+=================================== */
+.page-hero-content {
+	&.text-left {
+		text-align: right !important;
+	}
+
+	&.text-right {
+		text-align: left !important;
+
+		@include media-breakpoint-up(lg) {
+			.page-hero-subtitle {
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+	}
+
+	&.text-center {
+		@include media-breakpoint-up(lg) {
+			.page-hero-subtitle {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+.page-hero-align-left {
+	.page-hero-subtitle {
+		margin-right: auto;
+	}
+}
+
+/* Item listings
+=================================== */
+[class^="col-12"] {
+	@include media-breakpoint-up(md) {
+		> .entry-item {
+			.entry-item-thumb {
+				margin-right: 0;
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+.entry-item-read-more {
+	.fa {
+		transform: rotate(180deg);
+		margin-right: 5px;
+		margin-left: 0;
+	}
+}
+
+.entry-item-media-thumb {
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+/* Item buttons
+=================================== */
+.item-btn-icon {
+	margin-right: 0;
+	margin-left: 12px;
+}
+
+/* Entry
+=================================== */
+.entry-author-thumbnail {
+	margin-right: 0;
+	margin-left: 30px;
+
+	@include media-breakpoint-down(md) {
+		margin-right: 0;
+		margin-left: 15px;
+	}
+}
+
+.entry-block-meta {
+	span {
+		.fa {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+
+		b {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
+}
+
+/* Testimonials
+=================================== */
+.item-testimonial-content,
+.entry-content blockquote {
+	padding: 30px 85px 30px 30px;
+
+	&::before {
+		right: 20px;
+		left: auto;
+	}
+}
+
+.item-testimonial-cite {
+	margin: 30px 85px 0 0;
+}
+
+.item-testimonial-cite-thumb {
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+/* Tables
+=================================== */
+table {
+	&.table-styled {
+		thead {
+			th {
+				&:first-child {
+					border-top-left-radius: 0;
+					border-top-right-radius: 4px;
+				}
+
+				&:last-child {
+					border-top-left-radius: 4px;
+					border-top-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+/* Home - Hero
+=================================== */
+.widget-section-hero {
+	&.widget-section-hero-left {
+		text-align: right;
+	}
+
+	&.widget-section-hero-right {
+		text-align: left;
+	}
+}
+
+/* Search
+=================================== */
+.searchsubmit {
+	left: 0;
+	right: auto;
+}
+
+/* Listing Widgets
+=================================== */
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_product_categories,
+.widget_layered_nav {
+	li {
+		.count,
+		.ci-count {
+			right: auto;
+			left: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+.woocommerce-Reviews,
+.comment-author {
+	.avatar {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+
+.comment-reply-link {
+	@include media-breakpoint-up(md) {
+		margin-left: 0;
+		margin-right: 80px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer-info-addons {
+	@include media-breakpoint-up(md) {
+		text-align: left !important;
+	}
+}
+
+.footer-copy {
+	@include media-breakpoint-up(md) {
+		text-align: right !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+
+ul.cart_list,
+ul.product_list_widget {
+	li {
+		img {
+			margin-left: 15px;
+		}
+	}
+}
+
+.woocommerce-mini-cart__buttons  {
+	.button {
+		&:first-of-type {
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+}
+
+.woocommerce-pagination {
+	.next,
+	.previous {
+		transform: rotate(180deg);
+	}
+}
+
+.entry-summary {
+	.variations {
+		.reset_variations {
+			right: auto;
+			left: -45px;
+		}
+	}
+}
+
+.comment-form-rating  {
+	a {
+		margin-left: 15px;
+		margin-right: 0;
+	}
+}
+
+.group_table {
+	.stock {
+		margin: 0 10px 0 0;
+	}
+}
+
+.shop_table {
+	.coupon {
+		button[type="submit"] {
+			right: auto;
+			left: 0;
+		}
+	}
+}
+
+.woocommerce-MyAccount-navigation {
+	.woocommerce-MyAccount-navigation-link {
+		a {
+			&::after {
+				right: auto;
+				left: 5px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.woocommerce-Address-title {
+	a {
+		right: auto;
+		left: 0;
+	}
+}
+
+.price_slider_wrapper {
+	.price_label {
+		right: auto;
+		left: 0;
+	}
+}
+
+.price_slider {
+	.ui-slider-handle {
+		direction: initial;
+	}
+}

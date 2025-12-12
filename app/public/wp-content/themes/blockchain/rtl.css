@@ -1,0 +1,351 @@
+@-webkit-keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Normalization
+--------------------------------------------------------------*/
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body {
+  font-family: sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+ul,
+ol {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+select {
+  background-position: left .75rem center;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.head-intro-info span {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.head-intro-info i {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.mobile-nav-trigger {
+  float: left;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navigation-main-right {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+
+/* Buttons
+=================================== */
+
+.btn .fa,
+.button .fa,
+.woocommerce-Button .fa,
+.comment-reply-link .fa,
+input[type="submit"] .fa,
+input[type="reset"] .fa,
+button[type="submit"] .fa {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/* Hero Areas
+=================================== */
+
+.page-hero-content.text-left {
+  text-align: right !important;
+}
+
+.page-hero-content.text-right {
+  text-align: left !important;
+}
+
+.page-hero-align-left .page-hero-subtitle {
+  margin-right: auto;
+}
+
+/* Item listings
+=================================== */
+
+.entry-item-read-more .fa {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.entry-item-media-thumb {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+/* Item buttons
+=================================== */
+
+.item-btn-icon {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* Entry
+=================================== */
+
+.entry-author-thumbnail {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.entry-block-meta span .fa {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.entry-block-meta span b {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/* Testimonials
+=================================== */
+
+.item-testimonial-content,
+.entry-content blockquote {
+  padding: 30px 85px 30px 30px;
+}
+
+.item-testimonial-content::before,
+.entry-content blockquote::before {
+  right: 20px;
+  left: auto;
+}
+
+.item-testimonial-cite {
+  margin: 30px 85px 0 0;
+}
+
+.item-testimonial-cite-thumb {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+/* Tables
+=================================== */
+
+table.table-styled thead th:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px;
+}
+
+table.table-styled thead th:last-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+/* Home - Hero
+=================================== */
+
+.widget-section-hero.widget-section-hero-left {
+  text-align: right;
+}
+
+.widget-section-hero.widget-section-hero-right {
+  text-align: left;
+}
+
+/* Search
+=================================== */
+
+.searchsubmit {
+  left: 0;
+  right: auto;
+}
+
+/* Listing Widgets
+=================================== */
+
+.widget_meta li .count,
+.widget_meta li .ci-count,
+.widget_pages li .count,
+.widget_pages li .ci-count,
+.widget_categories li .count,
+.widget_categories li .ci-count,
+.widget_archive li .count,
+.widget_archive li .ci-count,
+.widget_product_categories li .count,
+.widget_product_categories li .ci-count,
+.widget_layered_nav li .count,
+.widget_layered_nav li .ci-count {
+  right: auto;
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+
+.woocommerce-Reviews .avatar,
+.comment-author .avatar {
+  float: right;
+  margin: 0 0 15px 15px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+
+ul.cart_list li img,
+ul.product_list_widget li img {
+  margin-left: 15px;
+}
+
+.woocommerce-mini-cart__buttons .button:first-of-type {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.woocommerce-pagination .next,
+.woocommerce-pagination .previous {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.entry-summary .variations .reset_variations {
+  right: auto;
+  left: -45px;
+}
+
+.comment-form-rating a {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.group_table .stock {
+  margin: 0 10px 0 0;
+}
+
+.shop_table .coupon button[type="submit"] {
+  right: auto;
+  left: 0;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a::after {
+  right: auto;
+  left: 5px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.woocommerce-Address-title a {
+  right: auto;
+  left: 0;
+}
+
+.price_slider_wrapper .price_label {
+  right: auto;
+  left: 0;
+}
+
+.price_slider .ui-slider-handle {
+  direction: initial;
+}
+
+@media (min-width: 768px) {
+  [class^="col-12"] > .entry-item .entry-item-thumb {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+
+  .comment-reply-link {
+    margin-left: 0;
+    margin-right: 80px;
+  }
+
+  .footer-info-addons {
+    text-align: left !important;
+  }
+
+  .footer-copy {
+    text-align: right !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-hero-content.text-right .page-hero-subtitle {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .page-hero-content.text-center .page-hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .entry-author-thumbnail {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,1638 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Blockchain Plugin\n"
+"POT-Creation-Date: 2018-12-07 15:33+0200\n"
+"PO-Revision-Date: 2016-08-29 19:22+0300\n"
+"Last-Translator: Anastis Sourgoutsidis <anastis@cssigniter.com>\n"
+"Language-Team: Anastis Sourgoutsidis <anastis@cssigniter.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: blockchain-plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: blockchain-plugin.php:60
+msgid "Select file"
+msgstr ""
+
+#: blockchain-plugin.php:61
+msgid "Select files"
+msgstr ""
+
+#: blockchain-plugin.php:62
+msgid "Use this file"
+msgstr ""
+
+#: blockchain-plugin.php:63
+msgid "Use these files"
+msgstr ""
+
+#: blockchain-plugin.php:64
+msgid "Update gallery"
+msgstr ""
+
+#: blockchain-plugin.php:65
+msgid "Loading..."
+msgstr ""
+
+#: blockchain-plugin.php:66
+msgid "Gallery preview not available."
+msgstr ""
+
+#: blockchain-plugin.php:67 inc/post-meta-hero.php:82
+msgid "Remove image"
+msgstr ""
+
+#: blockchain-plugin.php:68 inc/post-meta.php:428
+msgid "Remove from gallery"
+msgstr ""
+
+#: coinmarketcap.php:5
+msgid "Bitcoin (BTC)"
+msgstr ""
+
+#. translators: %1$s is the coin's name, e.g. Bitcoin. %2$s is the coin's symbol, e.g. BTC.
+#: coinmarketcap.php:16
+#, php-format
+msgctxt "cryptocoin label"
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: coinmarketcap.php:61
+msgctxt "currency code"
+msgid "AUD"
+msgstr ""
+
+#: coinmarketcap.php:62
+msgctxt "currency code"
+msgid "BRL"
+msgstr ""
+
+#: coinmarketcap.php:63
+msgctxt "currency code"
+msgid "CAD"
+msgstr ""
+
+#: coinmarketcap.php:64
+msgctxt "currency code"
+msgid "CHF"
+msgstr ""
+
+#: coinmarketcap.php:65
+msgctxt "currency code"
+msgid "CLP"
+msgstr ""
+
+#: coinmarketcap.php:66
+msgctxt "currency code"
+msgid "CNY"
+msgstr ""
+
+#: coinmarketcap.php:67
+msgctxt "currency code"
+msgid "CZK"
+msgstr ""
+
+#: coinmarketcap.php:68
+msgctxt "currency code"
+msgid "DKK"
+msgstr ""
+
+#: coinmarketcap.php:69
+msgctxt "currency code"
+msgid "EUR"
+msgstr ""
+
+#: coinmarketcap.php:70
+msgctxt "currency code"
+msgid "GBP"
+msgstr ""
+
+#: coinmarketcap.php:71
+msgctxt "currency code"
+msgid "HKD"
+msgstr ""
+
+#: coinmarketcap.php:72
+msgctxt "currency code"
+msgid "HUF"
+msgstr ""
+
+#: coinmarketcap.php:73
+msgctxt "currency code"
+msgid "IDR"
+msgstr ""
+
+#: coinmarketcap.php:74
+msgctxt "currency code"
+msgid "ILS"
+msgstr ""
+
+#: coinmarketcap.php:75
+msgctxt "currency code"
+msgid "INR"
+msgstr ""
+
+#: coinmarketcap.php:76
+msgctxt "currency code"
+msgid "JPY"
+msgstr ""
+
+#: coinmarketcap.php:77
+msgctxt "currency code"
+msgid "KRW"
+msgstr ""
+
+#: coinmarketcap.php:78
+msgctxt "currency code"
+msgid "MXN"
+msgstr ""
+
+#: coinmarketcap.php:79
+msgctxt "currency code"
+msgid "MYR"
+msgstr ""
+
+#: coinmarketcap.php:80
+msgctxt "currency code"
+msgid "NOK"
+msgstr ""
+
+#: coinmarketcap.php:81
+msgctxt "currency code"
+msgid "NZD"
+msgstr ""
+
+#: coinmarketcap.php:82
+msgctxt "currency code"
+msgid "PHP"
+msgstr ""
+
+#: coinmarketcap.php:83
+msgctxt "currency code"
+msgid "PKR"
+msgstr ""
+
+#: coinmarketcap.php:84
+msgctxt "currency code"
+msgid "PLN"
+msgstr ""
+
+#: coinmarketcap.php:85
+msgctxt "currency code"
+msgid "RUB"
+msgstr ""
+
+#: coinmarketcap.php:86
+msgctxt "currency code"
+msgid "SEK"
+msgstr ""
+
+#: coinmarketcap.php:87
+msgctxt "currency code"
+msgid "SGD"
+msgstr ""
+
+#: coinmarketcap.php:88
+msgctxt "currency code"
+msgid "THB"
+msgstr ""
+
+#: coinmarketcap.php:89
+msgctxt "currency code"
+msgid "TRY"
+msgstr ""
+
+#: coinmarketcap.php:90
+msgctxt "currency code"
+msgid "TWD"
+msgstr ""
+
+#: coinmarketcap.php:91
+msgctxt "currency code"
+msgid "USD"
+msgstr ""
+
+#: coinmarketcap.php:92
+msgctxt "currency code"
+msgid "ZAR"
+msgstr ""
+
+#: custom-fields-case-study.php:7
+msgctxt "post type general name"
+msgid "Case Studies"
+msgstr ""
+
+#: custom-fields-case-study.php:8 custom-fields-case-study.php:24
+msgctxt "post type singular name"
+msgid "Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:9
+msgctxt "admin menu"
+msgid "Case Studies"
+msgstr ""
+
+#: custom-fields-case-study.php:10
+msgctxt "add new on admin bar"
+msgid "Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:11
+msgctxt "Case Study"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-case-study.php:12
+msgid "Add New Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:13
+msgid "Edit Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:14
+msgid "New Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:15
+msgid "View Case Study"
+msgstr ""
+
+#: custom-fields-case-study.php:16
+msgid "Search Case Studies"
+msgstr ""
+
+#: custom-fields-case-study.php:17
+msgid "No Case Studies found"
+msgstr ""
+
+#: custom-fields-case-study.php:18
+msgid "No Case Studies found in the trash"
+msgstr ""
+
+#: custom-fields-case-study.php:19
+msgid "Parent Case Study:"
+msgstr ""
+
+#: custom-fields-case-study.php:29
+msgctxt "post type archive slug"
+msgid "case-study-archive"
+msgstr ""
+
+#: custom-fields-case-study.php:30
+msgctxt "post type slug"
+msgid "case-study"
+msgstr ""
+
+#: custom-fields-case-study.php:39
+msgctxt "taxonomy general name"
+msgid "Case Study Categories"
+msgstr ""
+
+#: custom-fields-case-study.php:40
+msgctxt "taxonomy singular name"
+msgid "Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:41
+msgid "Search Case Study Categories"
+msgstr ""
+
+#: custom-fields-case-study.php:42
+msgid "All Case Study Categories"
+msgstr ""
+
+#: custom-fields-case-study.php:43
+msgid "Parent Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:44
+msgid "Parent Case Study Category:"
+msgstr ""
+
+#: custom-fields-case-study.php:45
+msgid "Edit Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:46
+msgid "Update Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:47
+msgid "Add New Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:48
+msgid "New Case Study Category Name"
+msgstr ""
+
+#: custom-fields-case-study.php:49 custom-fields-event.php:49
+#: custom-fields-job.php:49 custom-fields-portfolio.php:49
+#: custom-fields-service.php:49 custom-fields-team.php:49
+msgid "Categories"
+msgstr ""
+
+#: custom-fields-case-study.php:50
+msgid "View Case Study Category"
+msgstr ""
+
+#: custom-fields-case-study.php:51
+msgid "Popular Case Study Categories"
+msgstr ""
+
+#: custom-fields-case-study.php:58
+msgctxt "taxonomy slug"
+msgid "case-study-category"
+msgstr ""
+
+#: custom-fields-case-study.php:68 custom-fields-event.php:68
+#: custom-fields-job.php:69 custom-fields-page.php:8
+#: custom-fields-portfolio.php:68 custom-fields-post.php:7
+#: custom-fields-service.php:68 custom-fields-team.php:68
+#: inc/post-meta-hero.php:44
+msgid "Hero section"
+msgstr ""
+
+#: custom-fields-case-study.php:69 custom-fields-event.php:69
+#: custom-fields-job.php:70 custom-fields-page.php:9 custom-fields-post.php:8
+#: custom-fields-service.php:69 custom-fields-team.php:69
+#: inc/post-meta-sidebar.php:11
+msgid "Sidebar"
+msgstr ""
+
+#: custom-fields-event.php:7
+msgctxt "post type general name"
+msgid "Events"
+msgstr ""
+
+#: custom-fields-event.php:8 custom-fields-event.php:24
+msgctxt "post type singular name"
+msgid "Event"
+msgstr ""
+
+#: custom-fields-event.php:9
+msgctxt "admin menu"
+msgid "Events"
+msgstr ""
+
+#: custom-fields-event.php:10
+msgctxt "add new on admin bar"
+msgid "Event"
+msgstr ""
+
+#: custom-fields-event.php:11
+msgctxt "Event"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-event.php:12
+msgid "Add New Event"
+msgstr ""
+
+#: custom-fields-event.php:13
+msgid "Edit Event"
+msgstr ""
+
+#: custom-fields-event.php:14
+msgid "New Event"
+msgstr ""
+
+#: custom-fields-event.php:15
+msgid "View Event"
+msgstr ""
+
+#: custom-fields-event.php:16
+msgid "Search Events"
+msgstr ""
+
+#: custom-fields-event.php:17
+msgid "No Events found"
+msgstr ""
+
+#: custom-fields-event.php:18
+msgid "No Events found in the trash"
+msgstr ""
+
+#: custom-fields-event.php:19
+msgid "Parent Event:"
+msgstr ""
+
+#: custom-fields-event.php:29
+msgctxt "post type archive slug"
+msgid "event-archive"
+msgstr ""
+
+#: custom-fields-event.php:30
+msgctxt "post type slug"
+msgid "event"
+msgstr ""
+
+#: custom-fields-event.php:39
+msgctxt "taxonomy general name"
+msgid "Event Categories"
+msgstr ""
+
+#: custom-fields-event.php:40
+msgctxt "taxonomy singular name"
+msgid "Event Category"
+msgstr ""
+
+#: custom-fields-event.php:41
+msgid "Search Event Categories"
+msgstr ""
+
+#: custom-fields-event.php:42
+msgid "All Event Categories"
+msgstr ""
+
+#: custom-fields-event.php:43
+msgid "Parent Event Category"
+msgstr ""
+
+#: custom-fields-event.php:44
+msgid "Parent Event Category:"
+msgstr ""
+
+#: custom-fields-event.php:45
+msgid "Edit Event Category"
+msgstr ""
+
+#: custom-fields-event.php:46
+msgid "Update Event Category"
+msgstr ""
+
+#: custom-fields-event.php:47
+msgid "Add New Event Category"
+msgstr ""
+
+#: custom-fields-event.php:48
+msgid "New Event Category Name"
+msgstr ""
+
+#: custom-fields-event.php:50
+msgid "View Event Category"
+msgstr ""
+
+#: custom-fields-event.php:51
+msgid "Popular Event Categories"
+msgstr ""
+
+#: custom-fields-event.php:57
+msgctxt "taxonomy slug"
+msgid "event-category"
+msgstr ""
+
+#: custom-fields-event.php:67
+msgid "Event information"
+msgstr ""
+
+#: custom-fields-event.php:98
+msgid "Event Details"
+msgstr ""
+
+#: custom-fields-event.php:102
+msgid "Event date. Use the date picker (click inside the field):"
+msgstr ""
+
+#: custom-fields-event.php:103
+msgid "Time:"
+msgstr ""
+
+#: custom-fields-event.php:104 custom-fields-job.php:104
+msgid "Location:"
+msgstr ""
+
+#: custom-fields-job.php:7
+msgctxt "post type general name"
+msgid "Jobs"
+msgstr ""
+
+#: custom-fields-job.php:8 custom-fields-job.php:24
+msgctxt "post type singular name"
+msgid "Job"
+msgstr ""
+
+#: custom-fields-job.php:9
+msgctxt "admin menu"
+msgid "Jobs"
+msgstr ""
+
+#: custom-fields-job.php:10
+msgctxt "add new on admin bar"
+msgid "Job"
+msgstr ""
+
+#: custom-fields-job.php:11
+msgctxt "Job"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-job.php:12
+msgid "Add New Job"
+msgstr ""
+
+#: custom-fields-job.php:13
+msgid "Edit Job"
+msgstr ""
+
+#: custom-fields-job.php:14
+msgid "New Job"
+msgstr ""
+
+#: custom-fields-job.php:15
+msgid "View Job"
+msgstr ""
+
+#: custom-fields-job.php:16
+msgid "Search Jobs"
+msgstr ""
+
+#: custom-fields-job.php:17
+msgid "No Jobs found"
+msgstr ""
+
+#: custom-fields-job.php:18
+msgid "No Jobs found in the trash"
+msgstr ""
+
+#: custom-fields-job.php:19
+msgid "Parent Job:"
+msgstr ""
+
+#: custom-fields-job.php:29
+msgctxt "post type archive slug"
+msgid "job-archive"
+msgstr ""
+
+#: custom-fields-job.php:30
+msgctxt "post type slug"
+msgid "job"
+msgstr ""
+
+#: custom-fields-job.php:39
+msgctxt "taxonomy general name"
+msgid "Job Categories"
+msgstr ""
+
+#: custom-fields-job.php:40
+msgctxt "taxonomy singular name"
+msgid "Job Category"
+msgstr ""
+
+#: custom-fields-job.php:41
+msgid "Search Job Categories"
+msgstr ""
+
+#: custom-fields-job.php:42
+msgid "All Job Categories"
+msgstr ""
+
+#: custom-fields-job.php:43
+msgid "Parent Job Category"
+msgstr ""
+
+#: custom-fields-job.php:44
+msgid "Parent Job Category:"
+msgstr ""
+
+#: custom-fields-job.php:45
+msgid "Edit Job Category"
+msgstr ""
+
+#: custom-fields-job.php:46
+msgid "Update Job Category"
+msgstr ""
+
+#: custom-fields-job.php:47
+msgid "Add New Job Category"
+msgstr ""
+
+#: custom-fields-job.php:48
+msgid "New Job Category Name"
+msgstr ""
+
+#: custom-fields-job.php:50
+msgid "View Job Category"
+msgstr ""
+
+#: custom-fields-job.php:51
+msgid "Popular Job Categories"
+msgstr ""
+
+#: custom-fields-job.php:58
+msgctxt "taxonomy slug"
+msgid "job-category"
+msgstr ""
+
+#: custom-fields-job.php:68
+msgid "Job information"
+msgstr ""
+
+#: custom-fields-job.php:100
+msgid "Job Details"
+msgstr ""
+
+#: custom-fields-job.php:105
+msgid "Department:"
+msgstr ""
+
+#: custom-fields-job.php:106
+msgid "Starting date:"
+msgstr ""
+
+#: custom-fields-job.php:107
+msgid "Salary:"
+msgstr ""
+
+#: custom-fields-page.php:7
+msgid "Header Options"
+msgstr ""
+
+#: custom-fields-page.php:10
+msgid "Front Page Options"
+msgstr ""
+
+#: custom-fields-page.php:11
+msgid "Portfolio Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:12
+msgid "Services Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:13
+msgid "Case Studies Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:14
+msgid "Team Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:15
+msgid "Events Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:16
+msgid "Testimonials Listing Options"
+msgstr ""
+
+#: custom-fields-page.php:60
+msgid ""
+"You can make the header appear overlaid over the content of this page. "
+"This is especially useful on front pages, where it's often desirable for "
+"the header to appear over the slider."
+msgstr ""
+
+#: custom-fields-page.php:61
+msgid "Make header appear over the content in this page."
+msgstr ""
+
+#: custom-fields-page.php:110
+msgid ""
+"You can select a MaxSlider slideshow to display on your front page. If you "
+"choose a slideshow, it will be displayed instead of the image and/or video "
+"that you have set on \"Hero section\"."
+msgstr ""
+
+#: custom-fields-page.php:113
+msgid "MaxSlider Slideshow"
+msgstr ""
+
+#: custom-fields-page.php:123
+msgid "Disable Slideshow"
+msgstr ""
+
+#: custom-fields-page.php:143
+msgid "Portfolio listing"
+msgstr ""
+
+#: custom-fields-page.php:157
+msgid "Services listing"
+msgstr ""
+
+#: custom-fields-page.php:171
+msgid "Case Studies listing"
+msgstr ""
+
+#: custom-fields-page.php:185
+msgid "Teams listing"
+msgstr ""
+
+#: custom-fields-page.php:199
+msgid "Events listing"
+msgstr ""
+
+#: custom-fields-page.php:215
+msgid "Testimonials listing"
+msgstr ""
+
+#: custom-fields-page.php:216 inc/items-listing.php:88
+msgid "Grid loading effect:"
+msgstr ""
+
+#: custom-fields-page.php:219 inc/items-listing.php:91
+msgid "Grid spacing:"
+msgstr ""
+
+#. translators: %d is a number of columns.
+#: custom-fields-page.php:226 inc/items-listing.php:98
+#, php-format
+msgid "%d Column"
+msgid_plural "%d Columns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: custom-fields-page.php:228 inc/items-listing.php:100
+msgid "Listing columns:"
+msgstr ""
+
+#. translators: %d is the current number of posts per page option.
+#: custom-fields-page.php:230 inc/items-listing.php:104
+#, php-format
+msgid ""
+"Set the number of items per page that you want to display. Setting this to "
+"<strong>-1</strong> will show <strong>all items</strong>, while setting it "
+"to zero or leaving it empty, will follow the global option set from "
+"<em>Settings -> Reading</em>, currently set to <strong>%d items per page</"
+"strong>."
+msgstr ""
+
+#: custom-fields-page.php:231 inc/items-listing.php:105
+msgid "Items per page:"
+msgstr ""
+
+#: custom-fields-portfolio.php:7
+msgctxt "post type general name"
+msgid "Portfolio"
+msgstr ""
+
+#: custom-fields-portfolio.php:8 custom-fields-portfolio.php:24
+msgctxt "post type singular name"
+msgid "Portfolio Item"
+msgstr ""
+
+#: custom-fields-portfolio.php:9
+msgctxt "admin menu"
+msgid "Portfolio"
+msgstr ""
+
+#: custom-fields-portfolio.php:10
+msgctxt "add new on admin bar"
+msgid "Portfolio"
+msgstr ""
+
+#: custom-fields-portfolio.php:11
+msgctxt "portfolio"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-portfolio.php:12
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: custom-fields-portfolio.php:13
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: custom-fields-portfolio.php:14
+msgid "New Portfolio Item"
+msgstr ""
+
+#: custom-fields-portfolio.php:15
+msgid "View Portfolio Item"
+msgstr ""
+
+#: custom-fields-portfolio.php:16
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: custom-fields-portfolio.php:17
+msgid "No Portfolio Items found"
+msgstr ""
+
+#: custom-fields-portfolio.php:18
+msgid "No Portfolio Items found in the trash"
+msgstr ""
+
+#: custom-fields-portfolio.php:19
+msgid "Parent Portfolio Item:"
+msgstr ""
+
+#: custom-fields-portfolio.php:29
+msgctxt "post type archive slug"
+msgid "portfolio-archive"
+msgstr ""
+
+#: custom-fields-portfolio.php:30
+msgctxt "post type slug"
+msgid "portfolio"
+msgstr ""
+
+#: custom-fields-portfolio.php:39
+msgctxt "taxonomy general name"
+msgid "Portfolio Categories"
+msgstr ""
+
+#: custom-fields-portfolio.php:40
+msgctxt "taxonomy singular name"
+msgid "Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:41
+msgid "Search Portfolio Categories"
+msgstr ""
+
+#: custom-fields-portfolio.php:42
+msgid "All Portfolio Categories"
+msgstr ""
+
+#: custom-fields-portfolio.php:43
+msgid "Parent Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:44
+msgid "Parent Portfolio Category:"
+msgstr ""
+
+#: custom-fields-portfolio.php:45
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:46
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:47
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:48
+msgid "New Portfolio Category Name"
+msgstr ""
+
+#: custom-fields-portfolio.php:50
+msgid "View Portfolio Category"
+msgstr ""
+
+#: custom-fields-portfolio.php:51
+msgid "Popular Portfolio Categories"
+msgstr ""
+
+#: custom-fields-portfolio.php:58
+msgctxt "taxonomy slug"
+msgid "portfolio-category"
+msgstr ""
+
+#: custom-fields-service.php:7
+msgctxt "post type general name"
+msgid "Services"
+msgstr ""
+
+#: custom-fields-service.php:8 custom-fields-service.php:24
+msgctxt "post type singular name"
+msgid "Service"
+msgstr ""
+
+#: custom-fields-service.php:9
+msgctxt "admin menu"
+msgid "Services"
+msgstr ""
+
+#: custom-fields-service.php:10
+msgctxt "add new on admin bar"
+msgid "Service"
+msgstr ""
+
+#: custom-fields-service.php:11
+msgctxt "Service"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-service.php:12
+msgid "Add New Service"
+msgstr ""
+
+#: custom-fields-service.php:13
+msgid "Edit Service"
+msgstr ""
+
+#: custom-fields-service.php:14
+msgid "New Service"
+msgstr ""
+
+#: custom-fields-service.php:15
+msgid "View Service"
+msgstr ""
+
+#: custom-fields-service.php:16
+msgid "Search Services"
+msgstr ""
+
+#: custom-fields-service.php:17
+msgid "No Services found"
+msgstr ""
+
+#: custom-fields-service.php:18
+msgid "No Services found in the trash"
+msgstr ""
+
+#: custom-fields-service.php:19
+msgid "Parent Service:"
+msgstr ""
+
+#: custom-fields-service.php:29
+msgctxt "post type archive slug"
+msgid "service-archive"
+msgstr ""
+
+#: custom-fields-service.php:30
+msgctxt "post type slug"
+msgid "service"
+msgstr ""
+
+#: custom-fields-service.php:39
+msgctxt "taxonomy general name"
+msgid "Service Categories"
+msgstr ""
+
+#: custom-fields-service.php:40
+msgctxt "taxonomy singular name"
+msgid "Service Category"
+msgstr ""
+
+#: custom-fields-service.php:41
+msgid "Search Service Categories"
+msgstr ""
+
+#: custom-fields-service.php:42
+msgid "All Service Categories"
+msgstr ""
+
+#: custom-fields-service.php:43
+msgid "Parent Service Category"
+msgstr ""
+
+#: custom-fields-service.php:44
+msgid "Parent Service Category:"
+msgstr ""
+
+#: custom-fields-service.php:45
+msgid "Edit Service Category"
+msgstr ""
+
+#: custom-fields-service.php:46
+msgid "Update Service Category"
+msgstr ""
+
+#: custom-fields-service.php:47
+msgid "Add New Service Category"
+msgstr ""
+
+#: custom-fields-service.php:48
+msgid "New Service Category Name"
+msgstr ""
+
+#: custom-fields-service.php:50
+msgid "View Service Category"
+msgstr ""
+
+#: custom-fields-service.php:51
+msgid "Popular Service Categories"
+msgstr ""
+
+#: custom-fields-service.php:58
+msgctxt "taxonomy slug"
+msgid "service-category"
+msgstr ""
+
+#: custom-fields-team.php:7
+msgctxt "post type general name"
+msgid "Team Members"
+msgstr ""
+
+#: custom-fields-team.php:8 custom-fields-team.php:24
+msgctxt "post type singular name"
+msgid "Team Member"
+msgstr ""
+
+#: custom-fields-team.php:9
+msgctxt "admin menu"
+msgid "Team Members"
+msgstr ""
+
+#: custom-fields-team.php:10
+msgctxt "add new on admin bar"
+msgid "Team Member"
+msgstr ""
+
+#: custom-fields-team.php:11
+msgctxt "Team Member"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-team.php:12
+msgid "Add New Team Member"
+msgstr ""
+
+#: custom-fields-team.php:13
+msgid "Edit Team Member"
+msgstr ""
+
+#: custom-fields-team.php:14
+msgid "New Team Member"
+msgstr ""
+
+#: custom-fields-team.php:15
+msgid "View Team Member"
+msgstr ""
+
+#: custom-fields-team.php:16
+msgid "Search Team Members"
+msgstr ""
+
+#: custom-fields-team.php:17
+msgid "No Team Members found"
+msgstr ""
+
+#: custom-fields-team.php:18
+msgid "No Team Members found in the trash"
+msgstr ""
+
+#: custom-fields-team.php:19
+msgid "Parent Team Member:"
+msgstr ""
+
+#: custom-fields-team.php:29
+msgctxt "post type archive slug"
+msgid "team-archive"
+msgstr ""
+
+#: custom-fields-team.php:30
+msgctxt "post type slug"
+msgid "team"
+msgstr ""
+
+#: custom-fields-team.php:39
+msgctxt "taxonomy general name"
+msgid "Team Member Categories"
+msgstr ""
+
+#: custom-fields-team.php:40
+msgctxt "taxonomy singular name"
+msgid "Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:41
+msgid "Search Team Member Categories"
+msgstr ""
+
+#: custom-fields-team.php:42
+msgid "All Team Member Categories"
+msgstr ""
+
+#: custom-fields-team.php:43
+msgid "Parent Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:44
+msgid "Parent Team Member Category:"
+msgstr ""
+
+#: custom-fields-team.php:45
+msgid "Edit Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:46
+msgid "Update Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:47
+msgid "Add New Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:48
+msgid "New Team Member Category Name"
+msgstr ""
+
+#: custom-fields-team.php:50
+msgid "View Team Member Category"
+msgstr ""
+
+#: custom-fields-team.php:51
+msgid "Popular Team Member Categories"
+msgstr ""
+
+#: custom-fields-team.php:58
+msgctxt "taxonomy slug"
+msgid "team-category"
+msgstr ""
+
+#: custom-fields-testimonial.php:7
+msgctxt "post type general name"
+msgid "Testimonials"
+msgstr ""
+
+#: custom-fields-testimonial.php:8 custom-fields-testimonial.php:24
+msgctxt "post type singular name"
+msgid "Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:9
+msgctxt "admin menu"
+msgid "Testimonials"
+msgstr ""
+
+#: custom-fields-testimonial.php:10
+msgctxt "add new on admin bar"
+msgid "Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:11
+msgctxt "testimonial"
+msgid "Add New"
+msgstr ""
+
+#: custom-fields-testimonial.php:12
+msgid "Add New Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:13
+msgid "Edit Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:14
+msgid "New Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:15
+msgid "View Testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:16
+msgid "Search Testimonials"
+msgstr ""
+
+#: custom-fields-testimonial.php:17
+msgid "No Testimonials found"
+msgstr ""
+
+#: custom-fields-testimonial.php:18
+msgid "No Testimonials found in the trash"
+msgstr ""
+
+#: custom-fields-testimonial.php:19
+msgid "Parent Testimonial:"
+msgstr ""
+
+#: custom-fields-testimonial.php:30
+msgctxt "post type slug"
+msgid "testimonial"
+msgstr ""
+
+#: custom-fields-testimonial.php:45 inc/post-meta-title-subtitle.php:12
+msgid "Title / Subtitle"
+msgstr ""
+
+#: customizer.php:12
+msgctxt "customizer section title"
+msgid "Other"
+msgstr ""
+
+#: customizer.php:13
+msgid "Other options affecting the whole site."
+msgstr ""
+
+#: customizer.php:19
+msgctxt "customizer section title"
+msgid "CoinMarketcap"
+msgstr ""
+
+#: customizer.php:31
+msgid "CoinMarketCap API Key"
+msgstr ""
+
+#. translators: %1$s is a URL
+#: customizer.php:33
+#, php-format
+msgid ""
+"From December 4th, 2018, CoinMarketCap will require a valid API Key to "
+"continue working. You can get your API key by registering <a href=\"%1$s"
+"\">here</a>"
+msgstr ""
+
+#: inc/items-listing.php:71
+msgid ""
+"Select a base category. Only items from the selected category will be "
+"displayed. If you don't select one (i.e. empty) items from all categories "
+"will be shown."
+msgstr ""
+
+#: inc/items-listing.php:72
+msgid "Base category:"
+msgstr ""
+
+#: inc/items-listing.php:101
+msgid "Masonry effect."
+msgstr ""
+
+#: inc/items-listing.php:102
+msgid "Enable category filters (ignores <em>Items per page</em> setting)."
+msgstr ""
+
+#: inc/items-listing.php:124
+msgid "With gutters"
+msgstr ""
+
+#: inc/items-listing.php:125
+msgid "No gutters"
+msgstr ""
+
+#: inc/post-meta-hero.php:33
+msgid ""
+"Since the hero section shows the title by default, you may want to disable "
+"the page title (shown before the content)."
+msgstr ""
+
+#. translators: %s is a user-provided title.
+#: inc/post-meta-hero.php:38
+#, php-format
+msgid ""
+"When checked, the title will appear on the hero section, replacing the "
+"blog title you have set from <em>Customize &rarr; Titles &rarr; General "
+"&rarr; Blog title</em>, currently set to: <em>%s</em>."
+msgstr ""
+
+#: inc/post-meta-hero.php:38
+msgid "From the blog"
+msgstr ""
+
+#: inc/post-meta-hero.php:47
+msgid "Show hero section."
+msgstr ""
+
+#: inc/post-meta-hero.php:50
+msgid "Title / subtitle alignment:"
+msgstr ""
+
+#: inc/post-meta-hero.php:53
+msgid "Hide page title."
+msgstr ""
+
+#: inc/post-meta-hero.php:56
+msgid "Background Color:"
+msgstr ""
+
+#: inc/post-meta-hero.php:59
+msgid "Text Color:"
+msgstr ""
+
+#: inc/post-meta-hero.php:62
+msgid "Overlay Color:"
+msgstr ""
+
+#: inc/post-meta-hero.php:65
+msgid "Video URL (YouTube or Vimeo)"
+msgstr ""
+
+#: inc/post-meta-hero.php:68
+msgid ""
+"The following image options are only applicable when a Hero image is "
+"selected."
+msgstr ""
+
+#: inc/post-meta-hero.php:74
+msgid "Hero image:"
+msgstr ""
+
+#: inc/post-meta-hero.php:88
+msgid "Select Image"
+msgstr ""
+
+#: inc/post-meta-hero.php:93
+msgid "Image repeat:"
+msgstr ""
+
+#: inc/post-meta-hero.php:94
+msgid "Image horizontal position:"
+msgstr ""
+
+#: inc/post-meta-hero.php:95
+msgid "Image vertical position:"
+msgstr ""
+
+#: inc/post-meta-hero.php:96
+msgid "Image attachment:"
+msgstr ""
+
+#: inc/post-meta-hero.php:97
+msgid "Scale the image to cover its container."
+msgstr ""
+
+#: inc/post-meta-sidebar.php:23
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/post-meta-sidebar.php:24
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/post-meta-sidebar.php:25
+msgid "No sidebar"
+msgstr ""
+
+#: inc/post-meta-title-subtitle.php:15
+msgid ""
+"You can provide an HTML version of your title, in order to format it "
+"according to your needs. If you leave it empty, the normal title will be "
+"used instead."
+msgstr ""
+
+#. translators: %1$s is an opening HTML tag. %2$s is a closing HTML tag.
+#: inc/post-meta-title-subtitle.php:17
+#, php-format
+msgid ""
+"You can wrap some text within <code>%1$s</code> and <code>%2$s</code> in "
+"order to make it stand out."
+msgstr ""
+
+#: inc/post-meta-title-subtitle.php:19
+msgid "Page Title (overrides the normal title):"
+msgstr ""
+
+#: inc/post-meta-title-subtitle.php:20
+msgid "Page Subtitle:"
+msgstr ""
+
+#: inc/post-meta.php:238
+msgid "Click to toggle"
+msgstr ""
+
+#: inc/post-meta.php:417
+msgid "Add Images"
+msgstr ""
+
+#: inc/post-meta.php:419
+msgid "Randomize order"
+msgstr ""
+
+#: inc/post-meta.php:434
+msgid "Your gallery images will appear here"
+msgstr ""
+
+#: inc/sanitization.php:77 inc/sanitization.php:112
+msgid "Left"
+msgstr ""
+
+#: inc/sanitization.php:78 inc/sanitization.php:113 inc/sanitization.php:130
+msgid "Center"
+msgstr ""
+
+#: inc/sanitization.php:79 inc/sanitization.php:114
+msgid "Right"
+msgstr ""
+
+#: inc/sanitization.php:94
+msgid "No repeat"
+msgstr ""
+
+#: inc/sanitization.php:95
+msgid "Tile"
+msgstr ""
+
+#: inc/sanitization.php:96
+msgid "Tile Horizontally"
+msgstr ""
+
+#: inc/sanitization.php:97
+msgid "Tile Vertically"
+msgstr ""
+
+#: inc/sanitization.php:129
+msgid "Top"
+msgstr ""
+
+#: inc/sanitization.php:131
+msgid "Bottom"
+msgstr ""
+
+#: inc/sanitization.php:146
+msgid "Scroll"
+msgstr ""
+
+#: inc/sanitization.php:147
+msgid "Fixed"
+msgstr ""
+
+#: inc/sanitization.php:237
+msgctxt "loading effect"
+msgid "None"
+msgstr ""
+
+#: inc/sanitization.php:238
+msgctxt "loading effect"
+msgid "Fade In"
+msgstr ""
+
+#: inc/sanitization.php:239
+msgctxt "loading effect"
+msgid "Move Up"
+msgstr ""
+
+#: inc/sanitization.php:240
+msgctxt "loading effect"
+msgid "Scale Up"
+msgstr ""
+
+#: inc/sanitization.php:241
+msgctxt "loading effect"
+msgid "Fall Perspective"
+msgstr ""
+
+#: inc/sanitization.php:242
+msgctxt "loading effect"
+msgid "Fly Up"
+msgstr ""
+
+#: inc/sanitization.php:243
+msgctxt "loading effect"
+msgid "Flip"
+msgstr ""
+
+#: inc/sanitization.php:244
+msgctxt "loading effect"
+msgid "Pop Up"
+msgstr ""
+
+#: shortcodes.php:118
+msgid "Rank"
+msgstr ""
+
+#: shortcodes.php:119
+msgid "(Symbol) Name"
+msgstr ""
+
+#: shortcodes.php:120 widgets/coinmarketcap-global.php:58
+#: widgets/coinmarketcap-global.php:109
+msgid "Market Cap"
+msgstr ""
+
+#: shortcodes.php:121 widgets/coinmarketcap-single.php:110
+#: widgets/coinmarketcap-single.php:169
+msgid "Price"
+msgstr ""
+
+#: shortcodes.php:122
+msgid "Volume (24h)"
+msgstr ""
+
+#: shortcodes.php:123
+msgid "Change (24h)"
+msgstr ""
+
+#: user-meta.php:9
+msgid "Author Information"
+msgstr ""
+
+#: user-meta.php:13
+msgid "Subtitle"
+msgstr ""
+
+#: user-meta.php:17
+msgid ""
+"The author subtitle is displayed on the author box, along with the "
+"author's name, below each article."
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:11
+msgid "Displays global cryptocurrency information."
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:13
+msgid "Theme - Global Crypto Info"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:64 widgets/coinmarketcap-global.php:115
+msgid "24h Volume"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:70 widgets/coinmarketcap-global.php:121
+msgid "BTC Coverage"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:76 widgets/coinmarketcap-global.php:127
+msgid "Total Active Currencies"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:82 widgets/coinmarketcap-global.php:133
+msgid "Active Markets"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:89 widgets/coinmarketcap-global.php:140
+#: widgets/coinmarketcap-single.php:141 widgets/coinmarketcap-single.php:200
+#: widgets/coinmarketcap-ticker.php:117 widgets/coinmarketcap-ticker.php:168
+msgid "Last update:"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:169 widgets/coinmarketcap-single.php:232
+#: widgets/coinmarketcap-ticker.php:205
+msgid "Title:"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:171 widgets/coinmarketcap-single.php:243
+#: widgets/coinmarketcap-ticker.php:227
+msgid "Show values expressed in:"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:185 widgets/coinmarketcap-single.php:257
+#: widgets/coinmarketcap-ticker.php:261
+msgid "1h"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:186 widgets/coinmarketcap-single.php:258
+#: widgets/coinmarketcap-ticker.php:262
+msgid "24h"
+msgstr ""
+
+#: widgets/coinmarketcap-global.php:187 widgets/coinmarketcap-single.php:259
+#: widgets/coinmarketcap-ticker.php:263
+msgid "7d"
+msgstr ""
+
+#: widgets/coinmarketcap-single.php:12
+msgid "Displays information about a specific cryptocurrency."
+msgstr ""
+
+#: widgets/coinmarketcap-single.php:14
+msgid "Theme - Single Crypto Symbol"
+msgstr ""
+
+#: widgets/coinmarketcap-single.php:234
+msgid "Crypto Currency:"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:14
+msgid "Displays a ticker of the top cryptocurrencies."
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:16
+msgid "Theme - Top Crypto Ticker"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:207
+msgid "Number of top cryptocurrencies:"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:216
+msgid "Number of top currencies to skip (0 for none):"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:218
+msgid "Show change percentage for the last:"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:241
+msgid "All"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:253
+msgid "1 Hour"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:254
+msgid "1 Day"
+msgstr ""
+
+#: widgets/coinmarketcap-ticker.php:255
+msgid "1 Week"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Blockchain theme-specific plugin"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.cssigniter.com/themes/blockchain/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Features required by the Blockchain theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "The CSSIgniter Team"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.cssigniter.com/"
+msgstr ""

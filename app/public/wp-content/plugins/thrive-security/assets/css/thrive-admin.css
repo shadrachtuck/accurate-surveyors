@@ -1,0 +1,490 @@
+/* Thrive Security - Modern Admin UI */
+
+/* CSS Variables for consistent theming */
+:root {
+    --thrive-primary: #6366f1;
+    --thrive-primary-dark: #4f46e5;
+    --thrive-secondary: #8b5cf6;
+    --thrive-success: #10b981;
+    --thrive-warning: #f59e0b;
+    --thrive-danger: #ef4444;
+    --thrive-info: #3b82f6;
+    --thrive-gray-50: #f9fafb;
+    --thrive-gray-100: #f3f4f6;
+    --thrive-gray-200: #e5e7eb;
+    --thrive-gray-300: #d1d5db;
+    --thrive-gray-400: #9ca3af;
+    --thrive-gray-500: #6b7280;
+    --thrive-gray-600: #4b5563;
+    --thrive-gray-700: #374151;
+    --thrive-gray-800: #1f2937;
+    --thrive-gray-900: #111827;
+    --thrive-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --thrive-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --thrive-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --thrive-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --thrive-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --thrive-border-radius: 12px;
+    --thrive-border-radius-lg: 16px;
+    --thrive-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Styles */
+.thrive-admin-wrap {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header */
+.thrive-admin-header {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.thrive-admin-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
+}
+
+.thrive-admin-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-clip: text;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Main Content Container */
+.thrive-admin-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+}
+
+/* Modern Cards */
+.thrive-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--thrive-border-radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--thrive-shadow-lg);
+    transition: var(--thrive-transition);
+    overflow: hidden;
+    position: relative;
+}
+
+.thrive-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--thrive-shadow-xl);
+}
+
+.thrive-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--thrive-primary) 0%, var(--thrive-secondary) 100%);
+}
+
+.thrive-card-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--thrive-gray-200);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.thrive-card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.thrive-card-body {
+    padding: 2rem;
+}
+
+/* Modern Toggle Switch */
+.thrive-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+.thrive-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.thrive-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--thrive-gray-300) 0%, var(--thrive-gray-400) 100%);
+    transition: var(--thrive-transition);
+    border-radius: 32px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thrive-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    transition: var(--thrive-transition);
+    border-radius: 50%;
+    box-shadow: var(--thrive-shadow-md);
+}
+
+.thrive-toggle input:checked + .thrive-toggle-slider {
+    background: linear-gradient(135deg, var(--thrive-success) 0%, #059669 100%);
+}
+
+.thrive-toggle input:checked + .thrive-toggle-slider:before {
+    transform: translateX(28px);
+}
+
+.thrive-toggle input:focus + .thrive-toggle-slider {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Status Badges */
+.thrive-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.thrive-status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.thrive-status-enabled {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    color: var(--thrive-success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.thrive-status-disabled {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    color: var(--thrive-danger);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Form Elements */
+.thrive-form-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.thrive-form-table th {
+    text-align: left;
+    padding: 1.5rem 1rem 1.5rem 0;
+    width: 250px;
+    vertical-align: top;
+    font-weight: 600;
+    color: var(--thrive-gray-700);
+    font-size: 0.95rem;
+}
+
+.thrive-form-table td {
+    padding: 1.5rem 1rem;
+    vertical-align: top;
+}
+
+/* Modern Input Fields */
+.thrive-admin-wrap input[type="text"],
+.thrive-admin-wrap input[type="url"],
+.thrive-admin-wrap input[type="email"],
+.thrive-admin-wrap input[type="password"],
+.thrive-admin-wrap input[type="number"],
+.thrive-admin-wrap select,
+.thrive-admin-wrap textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--thrive-gray-200);
+    border-radius: var(--thrive-border-radius);
+    font-size: 0.95rem;
+    transition: var(--thrive-transition);
+    background: white;
+    box-shadow: var(--thrive-shadow-sm);
+}
+
+.thrive-admin-wrap input[type="text"]:focus,
+.thrive-admin-wrap input[type="url"]:focus,
+.thrive-admin-wrap input[type="email"]:focus,
+.thrive-admin-wrap input[type="password"]:focus,
+.thrive-admin-wrap input[type="number"]:focus,
+.thrive-admin-wrap select:focus,
+.thrive-admin-wrap textarea:focus {
+    outline: none;
+    border-color: var(--thrive-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Section Headers */
+.thrive-blocking-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+    border-radius: var(--thrive-border-radius);
+    border: 1px solid var(--thrive-gray-100);
+}
+
+.thrive-blocking-section h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--thrive-gray-800);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.thrive-blocking-section h3::before {
+    content: '⚙️';
+    font-size: 1.1rem;
+}
+
+.thrive-blocking-section h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--thrive-gray-700);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.thrive-blocking-section h4::before {
+    content: '🔧';
+    font-size: 0.9rem;
+}
+
+/* Descriptions */
+.thrive-description {
+    color: var(--thrive-gray-600);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: var(--thrive-border-radius);
+    border-left: 4px solid var(--thrive-primary);
+}
+
+/* Modern Buttons */
+.thrive-admin-wrap .button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--thrive-border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--thrive-transition);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: var(--thrive-shadow);
+}
+
+.thrive-admin-wrap .button-primary {
+    background: linear-gradient(135deg, var(--thrive-primary) 0%, var(--thrive-primary-dark) 100%);
+    color: white;
+}
+
+.thrive-admin-wrap .button-primary:hover {
+    background: linear-gradient(135deg, var(--thrive-primary-dark) 0%, #4338ca 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--thrive-shadow-lg);
+}
+
+.thrive-admin-wrap .button-secondary {
+    background: linear-gradient(135deg, var(--thrive-gray-100) 0%, var(--thrive-gray-200) 100%);
+    color: var(--thrive-gray-700);
+    border: 1px solid var(--thrive-gray-300);
+}
+
+.thrive-admin-wrap .button-secondary:hover {
+    background: linear-gradient(135deg, var(--thrive-gray-200) 0%, var(--thrive-gray-300) 100%);
+    transform: translateY(-1px);
+    box-shadow: var(--thrive-shadow-md);
+}
+
+/* Submit Button */
+.thrive-submit-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
+    background: linear-gradient(135deg, var(--thrive-success) 0%, #059669 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--thrive-border-radius) !important;
+    box-shadow: var(--thrive-shadow-lg) !important;
+    transition: var(--thrive-transition) !important;
+}
+
+.thrive-submit-btn:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--thrive-shadow-xl) !important;
+}
+
+/* Notices */
+.thrive-admin-wrap .notice {
+    border-radius: var(--thrive-border-radius);
+    border: none;
+    box-shadow: var(--thrive-shadow);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.thrive-admin-wrap .notice-success {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border-left: 4px solid var(--thrive-success);
+    color: var(--thrive-gray-800);
+}
+
+.thrive-admin-wrap .notice-warning {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+    border-left: 4px solid var(--thrive-warning);
+    color: var(--thrive-gray-800);
+}
+
+.thrive-admin-wrap .notice-error {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    border-left: 4px solid var(--thrive-danger);
+    color: var(--thrive-gray-800);
+}
+
+/* Role List */
+.thrive-role-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.thrive-role-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: var(--thrive-border-radius);
+    border: 1px solid var(--thrive-gray-200);
+    transition: var(--thrive-transition);
+}
+
+.thrive-role-checkbox:hover {
+    border-color: var(--thrive-primary);
+    box-shadow: var(--thrive-shadow-sm);
+}
+
+/* Number Input */
+.thrive-number-input {
+    width: 100px;
+}
+
+/* Loading States */
+.thrive-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.thrive-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--thrive-primary);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: thrive-spin 1s linear infinite;
+}
+
+@keyframes thrive-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thrive-admin-header {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .thrive-admin-header h1 {
+        font-size: 2rem;
+    }
+    
+    .thrive-admin-content {
+        padding: 0 1rem 1rem;
+    }
+    
+    .thrive-card-body {
+        padding: 1.5rem;
+    }
+    
+    .thrive-form-table th,
+    .thrive-form-table td {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+    
+    .thrive-form-table th {
+        border-bottom: 1px solid var(--thrive-gray-200);
+        padding-bottom: 0.5rem;
+    }
+    
+    .thrive-role-list {
+        grid-template-columns: 1fr;
+    }
+}

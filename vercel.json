@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/public/index.php",
+      "use": "@vercel/php"
+    },
+    {
+      "src": "app/public/**/*.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/wp-admin/(.*)",
+      "dest": "/app/public/wp-admin/$1"
+    },
+    {
+      "src": "/wp-content/(.*)",
+      "dest": "/app/public/wp-content/$1"
+    },
+    {
+      "src": "/wp-includes/(.*)",
+      "dest": "/app/public/wp-includes/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|jpg|jpeg|png|gif|svg|woff|woff2|ttf|eot|ico|pdf))",
+      "dest": "/app/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app/public/index.php"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="1">blockchain_portfolio</custom-type>
+    <custom-type translate="1">blockchain_service</custom-type>
+    <custom-type translate="1">blockchain_cstudy</custom-type>
+    <custom-type translate="1">blockchain_team</custom-type>
+    <custom-type translate="1">blockchain_job</custom-type>
+    <custom-type translate="1">blockchain_event</custom-type>
+    <custom-type translate="1">blockchain_testimon</custom-type>
+  </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">blockchain_portfolio_category</taxonomy>
+    <taxonomy translate="1">blockchain_service_category</taxonomy>
+    <taxonomy translate="1">blockchain_cstudy_category</taxonomy>
+    <taxonomy translate="1">blockchain_team_category</taxonomy>
+    <taxonomy translate="1">blockchain_job_category</taxonomy>
+    <taxonomy translate="1">blockchain_event_category</taxonomy>
+  </taxonomies>
+  <custom-fields>
+    <custom-field action="translate">title</custom-field>
+    <custom-field action="translate">subtitle</custom-field>
+    <custom-field action="copy">hero_show</custom-field>
+    <custom-field action="copy">hero_text_align</custom-field>
+    <custom-field action="copy">page_title_hide</custom-field>
+    <custom-field action="copy">hero_image_id</custom-field>
+    <custom-field action="copy">hero_bg_color</custom-field>
+    <custom-field action="copy">hero_text_color</custom-field>
+    <custom-field action="copy">hero_overlay_color</custom-field>
+    <custom-field action="copy">hero_image_repeat</custom-field>
+    <custom-field action="copy">hero_image_position_x</custom-field>
+    <custom-field action="copy">hero_image_position_y</custom-field>
+    <custom-field action="copy">hero_image_attachment</custom-field>
+    <custom-field action="copy">hero_image_cover</custom-field>
+    <custom-field action="copy">hero_video_url</custom-field>
+    <custom-field action="copy">blockchain_sidebar</custom-field>
+    <custom-field action="copy">blockchain_hide_single_featured</custom-field>
+    <custom-field action="copy">blockchain_event_date</custom-field>
+    <custom-field action="copy">blockchain_event_time</custom-field>
+    <custom-field action="translate">blockchain_event_location</custom-field>
+    <custom-field action="translate">blockchain_job_location</custom-field>
+    <custom-field action="translate">blockchain_job_department</custom-field>
+    <custom-field action="copy">blockchain_job_date</custom-field>
+    <custom-field action="translate">blockchain_job_salary</custom-field>
+    <custom-field action="copy">blockchain_front_slider_id</custom-field>
+    <custom-field action="ignore">blockchain_portfolio_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_portfolio_listing_posts_per_page</custom-field>
+    <custom-field action="ignore">blockchain_service_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_service_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_service_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_service_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_service_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_service_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_service_listing_posts_per_page</custom-field>
+    <custom-field action="ignore">blockchain_case_study_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_case_study_listing_posts_per_page</custom-field>
+    <custom-field action="ignore">blockchain_team_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_team_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_team_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_team_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_team_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_team_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_team_listing_posts_per_page</custom-field>
+    <custom-field action="ignore">blockchain_cstudy_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_cstudy_listing_posts_per_page</custom-field>
+    <custom-field action="ignore">blockchain_event_listing_base_category</custom-field>
+    <custom-field action="copy">blockchain_event_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_event_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_event_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_event_listing_masonry</custom-field>
+    <custom-field action="copy">blockchain_event_listing_isotope</custom-field>
+    <custom-field action="copy">blockchain_event_listing_posts_per_page</custom-field>
+    <custom-field action="copy">blockchain_testimon_listing_loading_effect</custom-field>
+    <custom-field action="copy">blockchain_testimon_listing_spacing</custom-field>
+    <custom-field action="copy">blockchain_testimon_listing_columns</custom-field>
+    <custom-field action="copy">blockchain_testimon_listing_posts_per_page</custom-field>
+    <custom-field action="copy">blockchain_header_overlaid</custom-field>
+  </custom-fields>
+  <admin-texts>
+    <key name="theme_mods_blockchain">
+      <key name="header_top_bar_text_1"/>
+      <key name="header_top_bar_text_2"/>
+      <key name="footer_text"/>
+      <key name="title_blog"/>
+      <key name="title_search"/>
+      <key name="title_404"/>
+      <key name="title_post_related_title"/>
+      <key name="title_post_related_subtitle"/>
+      <key name="title_portfolio_related_title"/>
+      <key name="title_portfolio_related_subtitle"/>
+    </key>
+  </admin-texts>
+</wpml-config>

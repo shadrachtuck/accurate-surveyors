@@ -1,0 +1,202 @@
+/* Main Admin Styles */
+.wp-2fa-admin-wrap {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wp-2fa-admin-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.wp-2fa-admin-header h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+}
+
+.wp-2fa-admin-header p {
+    margin: 10px 0 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Card Layout */
+.wp-2fa-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.wp-2fa-card-header {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.wp-2fa-card-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.wp-2fa-card-body {
+    padding: 20px;
+}
+
+/* Form Elements */
+.wp-2fa-form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wp-2fa-form-table th {
+    text-align: left;
+    padding: 15px 10px 15px 0;
+    width: 200px;
+    vertical-align: top;
+    font-weight: 500;
+    color: #23282d;
+}
+
+.wp-2fa-form-table td {
+    padding: 15px 0;
+    vertical-align: middle;
+}
+
+.wp-2fa-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.wp-2fa-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.wp-2fa-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.wp-2fa-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .wp-2fa-toggle-slider {
+    background-color: #2575fc;
+}
+
+input:focus + .wp-2fa-toggle-slider {
+    box-shadow: 0 0 1px #2575fc;
+}
+
+input:checked + .wp-2fa-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.wp-2fa-role-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.wp-2fa-role-list label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.wp-2fa-role-list input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.wp-2fa-number-input {
+    width: 80px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.wp-2fa-description {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    font-style: normal;
+}
+
+/* Submit Button */
+.wp-2fa-submit-btn {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wp-2fa-submit-btn:hover {
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+}
+
+/* Status Indicator */
+.wp-2fa-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.wp-2fa-status-enabled {
+    background-color: #e3f9e5;
+    color: #0d6832;
+}
+
+.wp-2fa-status-disabled {
+    background-color: #ffeaea;
+    color: #d63638;
+}
+
+.wp-2fa-settings-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wp-2fa-settings-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.wp-2fa-settings-form .description {
+    font-style: italic;
+    color: #666;
+}

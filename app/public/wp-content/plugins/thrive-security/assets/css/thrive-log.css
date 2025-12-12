@@ -1,0 +1,793 @@
+/* Thrive Security - Modern Log Page UI */
+
+/* Subtle background for the whole admin area */
+.thrive-admin-wrap {
+    background: transparent;
+    min-height: 100vh;
+}
+
+/* Always use a white background for the main content area */
+.thrive-admin-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Stat cards always white, with shadow */
+.thrive-stats-grid {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 2rem;
+}
+
+.thrive-stat-card {
+    background: #fff !important;
+    color: #1f2937;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+    border: 1px solid #e5e7eb;
+}
+
+.thrive-stat-icon {
+    color: #6366f1;
+    background: #f3f4f6;
+}
+
+.thrive-stat-label {
+    color: #6b7280;
+}
+
+/* Card backgrounds always white */
+.thrive-card {
+    background: #fff !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+    border: 1px solid #e5e7eb;
+}
+
+.thrive-card-header {
+    background: #f9fafb !important;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Button consistency */
+.button, .thrive-action-btn, .thrive-quick-action {
+    border-radius: 12px !important;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(99,102,241,0.07);
+    transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.button-primary, .thrive-action-btn.button-primary {
+    background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+.button-primary:hover, .thrive-action-btn.button-primary:hover {
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%) !important;
+    color: #fff !important;
+}
+.button-secondary, .thrive-action-btn.button-secondary {
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+    border: 1px solid #e5e7eb !important;
+}
+.button-secondary:hover, .thrive-action-btn.button-secondary:hover {
+    background: #e0e7ff !important;
+    color: #3730a3 !important;
+}
+.button-danger, .thrive-action-btn.button-danger {
+    background: #ef4444 !important;
+    color: #fff !important;
+    border: none !important;
+}
+.button-danger:hover, .thrive-action-btn.button-danger:hover {
+    background: #b91c1c !important;
+    color: #fff !important;
+}
+
+/* Fix for icon alignment */
+.thrive-stat-icon, .thrive-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure all text is readable */
+.thrive-stat-number, .thrive-config-label, .thrive-config-value, .thrive-stat-label, .thrive-card-header h2, .thrive-card-header, .thrive-card-body, .thrive-event-label {
+    color: #1f2937 !important;
+}
+
+/* Configuration Info */
+.thrive-config-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.thrive-config-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thrive-config-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.thrive-config-value {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    color: #6366f1;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.thrive-config-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Log Actions */
+.thrive-log-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.thrive-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.thrive-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.thrive-btn-icon {
+    font-size: 1.1rem;
+}
+
+/* Log Controls */
+.thrive-log-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+    border-radius: 12px;
+    border: 1px solid #f3f4f6;
+    flex-wrap: wrap;
+}
+
+.thrive-search-filter {
+    flex: 1;
+    min-width: 300px;
+}
+
+.thrive-search-box {
+    flex-shrink: 0;
+}
+
+/* Search Container */
+.thrive-search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.thrive-search-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.thrive-search-container input[type="search"] {
+    min-width: 300px;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.thrive-search-container input[type="search"]:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+.thrive-search-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thrive-search-btn:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* View Counts */
+.thrive-view-count {
+    background: #e5e7eb;
+    color: #4b5563;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Table Styling */
+.wp-list-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.wp-list-table thead th {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-bottom: 2px solid #e5e7eb;
+    font-weight: 600;
+    color: #1f2937;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}
+
+.wp-list-table tbody tr {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.wp-list-table tbody tr:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+.wp-list-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Date Cell */
+.thrive-date-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.thrive-date-main {
+    font-weight: 600;
+    color: #1f2937 !important;
+    font-size: 0.95rem;
+}
+
+.thrive-date-time {
+    font-size: 0.85rem;
+    color: #1f2937;
+}
+
+/* Event Type */
+.thrive-event-type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.thrive-event-icon {
+    font-size: 1rem;
+}
+
+.thrive-event-label {
+    text-transform: capitalize;
+}
+
+/* Event Type Variations */
+.thrive-event-type-plugin-blocked {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.thrive-event-type-theme-blocked {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.thrive-event-type-access-blocked {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.thrive-event-type-login-attempt {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Target Cell */
+.thrive-target-cell {
+    display: flex;
+    align-items: center;
+}
+
+.thrive-target-code {
+    background: #f3f4f6;
+    color: #1f2937;
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.85rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* IP Cell */
+.thrive-ip-cell {
+    display: flex;
+    align-items: center;
+}
+
+.thrive-ip-address {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+}
+
+.thrive-ip-external {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.thrive-ip-internal {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* User Cell */
+.thrive-user-cell {
+    display: flex;
+    align-items: center;
+}
+
+.thrive-user-name {
+    font-weight: 600;
+    color: #1f2937 !important;
+    padding: 0.5rem 0.75rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Empty State */
+.thrive-empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.thrive-empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.thrive-empty-state h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.thrive-empty-state p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Quick Actions */
+.thrive-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.thrive-quick-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #374151;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thrive-quick-action:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-color: #6366f1;
+    color: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.thrive-quick-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.thrive-quick-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Notice Styles */
+.thrive-disabled-notice,
+.thrive-error-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.thrive-error-notice {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.thrive-notice-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.thrive-notice-content h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.thrive-notice-content p {
+    margin: 0 0 1rem 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.thrive-notice-content .button {
+    margin-top: 1rem;
+}
+
+/* Pagination */
+.tablenav {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tablenav-pages {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tablenav-pages a,
+.tablenav-pages span {
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tablenav-pages a {
+    background: white;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}
+
+.tablenav-pages a:hover {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+    transform: translateY(-1px);
+}
+
+.tablenav-pages span.current {
+    background: #6366f1;
+    color: white;
+    border: 1px solid #6366f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thrive-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .thrive-config-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .thrive-log-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .thrive-search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .thrive-search-container input[type="search"] {
+        min-width: auto;
+    }
+    
+    .thrive-quick-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    .wp-list-table {
+        font-size: 0.9rem;
+    }
+    
+    .wp-list-table thead th,
+    .wp-list-table tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .thrive-event-type {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+    }
+}
+
+/* Responsive fix for stat grid */
+@media (max-width: 768px) {
+    .thrive-admin-content {
+        padding: 1rem 0.5rem;
+    }
+    .thrive-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .thrive-stat-card,
+    .wp-list-table,
+    .thrive-empty-state {
+        background: rgba(31, 41, 55, 0.95);
+        border-color: rgba(75, 85, 99, 0.3);
+    }
+    
+    .thrive-stat-number,
+    .thrive-config-label,
+    .thrive-search-label,
+    .wp-list-table thead th,
+    .thrive-date-main,
+    .thrive-user-name,
+    .thrive-empty-state h3 {
+        color: white;
+    }
+    
+    .thrive-stat-label,
+    .thrive-date-time,
+    .thrive-empty-state p {
+        color: #d1d5db;
+    }
+    
+    .thrive-target-code,
+    .thrive-ip-address {
+        background: rgba(31, 41, 55, 0.7);
+        border-color: #4b5563;
+        color: #d1d5db;
+    }
+    
+    .thrive-quick-action {
+        background: rgba(31, 41, 55, 0.7);
+        border-color: #4b5563;
+        color: #d1d5db;
+    }
+    
+    .thrive-quick-action:hover {
+        background: rgba(99, 102, 241, 0.2);
+        border-color: #6366f1;
+        color: white;
+    }
+    
+    .thrive-quick-icon {
+        background: rgba(31, 41, 55, 0.9);
+    }
+} 
+
+/* 1. Force Sync Config button margin */
+.thrive-config-actions a,
+.thrive-config-actions .button {
+    margin-top: 16px !important;
+}
+
+/* 2. Log actions margin */
+.thrive-log-actions {
+    margin-top: 18px;
+}
+
+/* 3. Danger button margin */
+.button.button-danger.thrive-action-btn {
+    margin-right: 10px;
+}
+
+/* 4. Modernize stat card */
+/* Stat cards grid layout */
+.thrive-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Modern stat card */
+.thrive-stat-card {
+    background: #fff !important;
+    color: #1f2937;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(99,102,241,0.10);
+    border: 1px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 0; /* grid handles spacing */
+}
+.thrive-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+    z-index: 1;
+}
+.thrive-stat-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(99,102,241,0.18);
+    transform: translateY(-2px) scale(1.025);
+}
+
+.thrive-stat-icon {
+    font-size: 2.8rem;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #eef2ff 0%, #f3f4f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px 0 rgba(99,102,241,0.07);
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.thrive-stat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.thrive-stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #3730a3;
+    margin-bottom: 0.2rem;
+    letter-spacing: -1px;
+}
+
+.thrive-stat-label {
+    font-size: 1.05rem;
+    color: #6366f1;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+    .thrive-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .thrive-stat-card {
+        margin-bottom: 1.2rem;
+        padding: 1.2rem 1rem;
+    }
+    .thrive-stat-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 2rem;
+    }
+    .thrive-stat-number {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,443 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MaxSlider\n"
+"POT-Creation-Date: 2024-09-25 15:25+0300\n"
+"PO-Revision-Date: 2016-08-29 19:22+0300\n"
+"Last-Translator: Anastis Sourgoutsidis <anastis@cssigniter.com>\n"
+"Language-Team: Anastis Sourgoutsidis <anastis@cssigniter.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: maxslider.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: class-maxslider-visual-composer-slider.php:37 maxslider.php:340
+msgid "MaxSlider"
+msgstr ""
+
+#. translators: This translation should match the Visual Composer element category's translation, in order for the element to get grouped under the same category.
+#: class-maxslider-visual-composer-slider.php:40
+msgctxt "Visual Composer element category"
+msgid "Content"
+msgstr ""
+
+#: class-maxslider-visual-composer-slider.php:41
+msgid "Displays a single slider"
+msgstr ""
+
+#: class-maxslider-visual-composer-slider.php:45
+msgid "Slider"
+msgstr ""
+
+#: class-maxslider-visual-composer-slider.php:50
+msgid "Choose a previously created slider from the drop down list."
+msgstr ""
+
+#: maxslider.php:254
+msgid ""
+"Do you really want to remove all slides? (This will not delete your image "
+"files)."
+msgstr ""
+
+#: maxslider.php:255
+msgid "Select a slide image"
+msgstr ""
+
+#: maxslider.php:352
+msgctxt "post type general name"
+msgid "Sliders"
+msgstr ""
+
+#: maxslider.php:353 maxslider.php:368
+msgctxt "post type singular name"
+msgid "Slider"
+msgstr ""
+
+#: maxslider.php:354
+msgctxt "admin menu"
+msgid "MaxSlider"
+msgstr ""
+
+#: maxslider.php:355
+msgctxt "add new on admin bar"
+msgid "Slider"
+msgstr ""
+
+#: maxslider.php:356
+msgid "Add New"
+msgstr ""
+
+#: maxslider.php:357
+msgid "Add New Slider"
+msgstr ""
+
+#: maxslider.php:358
+msgid "Edit Slider"
+msgstr ""
+
+#: maxslider.php:359
+msgid "New Slider"
+msgstr ""
+
+#: maxslider.php:360
+msgid "View Sliders"
+msgstr ""
+
+#: maxslider.php:361
+msgid "Search Sliders"
+msgstr ""
+
+#: maxslider.php:362
+msgid "No sliders found"
+msgstr ""
+
+#: maxslider.php:363
+msgid "No sliders found in the trash"
+msgstr ""
+
+#: maxslider.php:389
+msgid "Slides"
+msgstr ""
+
+#: maxslider.php:390
+msgid "Settings"
+msgstr ""
+
+#: maxslider.php:391
+msgid "Shortcode"
+msgstr ""
+
+#: maxslider.php:457
+msgid "MaxSlider Logo"
+msgstr ""
+
+#: maxslider.php:485
+msgid "Support"
+msgstr ""
+
+#: maxslider.php:489
+msgid "Documentation"
+msgstr ""
+
+#: maxslider.php:493
+msgid "Rate this plugin"
+msgstr ""
+
+#: maxslider.php:515
+#, php-format
+msgid ""
+"Thank you for creating with <a href=\"%s\" target=\"_blank\">MaxSlider</a>"
+msgstr ""
+
+#: maxslider.php:572
+msgid "Toggle slide visibility"
+msgstr ""
+
+#: maxslider.php:583
+msgid "Remove Image"
+msgstr ""
+
+#: maxslider.php:596
+msgid "Upload Image"
+msgstr ""
+
+#: maxslider.php:616 maxslider.php:623
+msgid "Title"
+msgstr ""
+
+#: maxslider.php:629 maxslider.php:638
+msgid "Title size"
+msgstr ""
+
+#: maxslider.php:644 maxslider.php:651
+msgid "Title color"
+msgstr ""
+
+#: maxslider.php:662 maxslider.php:669
+msgid "Subtitle"
+msgstr ""
+
+#: maxslider.php:675 maxslider.php:684
+msgid "Subtitle size"
+msgstr ""
+
+#: maxslider.php:690 maxslider.php:697
+msgid "Subtitle color"
+msgstr ""
+
+#: maxslider.php:708 maxslider.php:715
+msgid "Button text"
+msgstr ""
+
+#: maxslider.php:723 maxslider.php:730
+msgid "Button URL"
+msgstr ""
+
+#: maxslider.php:739 maxslider.php:746
+msgid "Button background color"
+msgstr ""
+
+#: maxslider.php:752 maxslider.php:759
+msgid "Button text color"
+msgstr ""
+
+#: maxslider.php:765 maxslider.php:771
+msgid "Button size"
+msgstr ""
+
+#: maxslider.php:791
+msgid "Horizontal content alignment"
+msgstr ""
+
+#: maxslider.php:813
+msgid "Vertical content alignment"
+msgstr ""
+
+#: maxslider.php:835 maxslider.php:842
+msgid "Content background color"
+msgstr ""
+
+#: maxslider.php:849 maxslider.php:856
+msgid "Slide overlay color"
+msgstr ""
+
+#: maxslider.php:867
+msgid "Remove Slide"
+msgstr ""
+
+#: maxslider.php:881
+msgid "Add Slide"
+msgstr ""
+
+#: maxslider.php:888
+msgid "Remove all slides"
+msgstr ""
+
+#: maxslider.php:894
+msgid "Expand All"
+msgstr ""
+
+#: maxslider.php:897
+msgid "Collapse All"
+msgstr ""
+
+#: maxslider.php:941
+msgid "Auto slide"
+msgstr ""
+
+#: maxslider.php:947
+msgid "Slide effect"
+msgstr ""
+
+#: maxslider.php:967 maxslider.php:977
+msgid "Pause between slides"
+msgstr ""
+
+#: maxslider.php:982
+msgid "Time in milliseconds."
+msgstr ""
+
+#: maxslider.php:988 maxslider.php:997
+msgid "Height"
+msgstr ""
+
+#: maxslider.php:1027
+msgid ""
+"Provide the height of this slider (leaving this empty will apply the default "
+"of 600px)."
+msgstr ""
+
+#: maxslider.php:1033
+msgid "Navigation type"
+msgstr ""
+
+#: maxslider.php:1051
+msgid ""
+"Please note that on mobile devices the slider will always display dots "
+"instead of arrows regardless of this setting. The \"none\" setting will "
+"always be respected."
+msgstr ""
+
+#: maxslider.php:1057
+msgid "Arrows position"
+msgstr ""
+
+#: maxslider.php:1075
+msgid "Applies only to arrow navigation."
+msgstr ""
+
+#: maxslider.php:1082 maxslider.php:1089
+msgid "Navigation color"
+msgstr ""
+
+#: maxslider.php:1096 maxslider.php:1103
+msgid "Navigation background color"
+msgstr ""
+
+#: maxslider.php:1110
+msgid "Image size"
+msgstr ""
+
+#: maxslider.php:1142
+msgid "Choose a template"
+msgstr ""
+
+#: maxslider.php:1156
+msgid "Grab the shortcode"
+msgstr ""
+
+#: maxslider.php:1228
+msgid "Move slide"
+msgstr ""
+
+#: maxslider.php:1243
+msgid "Batch Upload"
+msgstr ""
+
+#. translators: %1$s is width. %2$s is height.
+#: maxslider.php:1393
+#, php-format
+msgid "%1$s&times;%2$s"
+msgstr ""
+
+#: maxslider.php:1394
+msgid "Full size"
+msgstr ""
+
+#: maxslider.php:1399
+msgid "Set by: Theme / Plugin"
+msgstr ""
+
+#: maxslider.php:1412
+msgid "Set by: MaxSlider"
+msgstr ""
+
+#: maxslider.php:1425
+msgid "Set by: Settings > Media"
+msgstr ""
+
+#: maxslider.php:1445
+msgid "Extra small"
+msgstr ""
+
+#: maxslider.php:1446
+msgid "Small"
+msgstr ""
+
+#: maxslider.php:1447
+msgid "Default"
+msgstr ""
+
+#: maxslider.php:1448
+msgid "Large"
+msgstr ""
+
+#: maxslider.php:1454
+msgid "Left"
+msgstr ""
+
+#: maxslider.php:1455
+msgid "Center"
+msgstr ""
+
+#: maxslider.php:1456
+msgid "Right"
+msgstr ""
+
+#: maxslider.php:1462
+msgid "Top"
+msgstr ""
+
+#: maxslider.php:1463
+msgid "Middle"
+msgstr ""
+
+#: maxslider.php:1464
+msgid "Bottom"
+msgstr ""
+
+#: maxslider.php:1476
+msgid "None"
+msgstr ""
+
+#: maxslider.php:1477
+msgid "Arrows"
+msgstr ""
+
+#: maxslider.php:1478
+msgid "Dots"
+msgstr ""
+
+#: maxslider.php:1479
+msgid "Arrows & Dots"
+msgstr ""
+
+#: maxslider.php:1491
+msgid "Default (vertically centered)"
+msgstr ""
+
+#: maxslider.php:1492
+msgid "Top Left"
+msgstr ""
+
+#: maxslider.php:1493
+msgid "Top Right"
+msgstr ""
+
+#: maxslider.php:1494
+msgid "Bottom Left"
+msgstr ""
+
+#: maxslider.php:1495
+msgid "Bottom Right"
+msgstr ""
+
+#: maxslider.php:1501
+msgid "Fade"
+msgstr ""
+
+#: maxslider.php:1502
+msgid "Slide"
+msgstr ""
+
+#: maxslider.php:1515
+msgid "Pixels (px)"
+msgstr ""
+
+#: maxslider.php:1516
+msgid "Viewport Height (vh)"
+msgstr ""
+
+#: maxslider.php:1849
+msgctxt "maxslider template"
+msgid "Default"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.cssigniter.com/ignite/plugins/maxslider/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"MaxSlider is a free WordPress slider plugin that lets you create responsive "
+"sliders for your website. Shortcode and Visual Composer support included."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "The CSSIgniter Team"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.cssigniter.com"
+msgstr ""

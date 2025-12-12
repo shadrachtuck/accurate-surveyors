@@ -1,0 +1,32 @@
+# Local by Flywheel
+conf/
+logs/
+*.log
+
+# WordPress
+app/public/wp-content/uploads/
+app/public/wp-config.php
+*.sql
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (if any)
+node_modules/
+package-lock.json
+
+# Git
+.git/
+.gitignore
+
+# Debug files
+.cursor/
+debug.log

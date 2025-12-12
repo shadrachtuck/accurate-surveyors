@@ -1,0 +1,53 @@
+.thrive-login-container {
+    margin-top: 50px !important;
+    text-align: center;
+}
+
+.thrive-login-or {
+    margin: 10px 0 !important;
+    font-size: 14px;
+    color: #777;
+}
+
+.thrive-login-button {
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+    background-color: #6FC126 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 3px !important;
+    font-weight: bold !important;
+    margin: 0 auto !important;
+    width: 220px !important;
+    float: none !important;
+}
+
+.thrive-login-button:hover {
+    background-color: #4b8518 !important;
+    color: #fff;
+}
+
+
+.thrive-login-icon {
+    display: inline-block;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url('../android-chrome-192x192.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.thrive-login-error {
+    color: #d63638;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffebe8;
+    border: 1px solid #d63638;
+    border-radius: 3px;
+}

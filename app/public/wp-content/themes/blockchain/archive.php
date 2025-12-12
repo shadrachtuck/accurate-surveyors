@@ -1,0 +1,61 @@
+<?php get_header(); ?>
+
+<?php get_template_part( 'template-parts/hero' ); ?>
+
+<main class="main">
+
+	<div class="container">
+
+		<?php if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'archive' ) ) : ?>
+
+			<div class="row">
+				<div class="<?php blockchain_the_container_classes(); ?>">
+
+					<?php get_template_part( 'template-parts/archive-heading' ); ?>
+
+					<?php
+						if ( have_posts() ) :
+
+							$layout  = get_theme_mod( 'archive_layout', blockchain_archive_layout_default() );
+							$masonry = get_theme_mod( 'archive_masonry', 1 );
+							$classes = array();
+							if ( $masonry ) {
+								$classes[] = 'row-isotope';
+							}
+
+							?>
+							<div class="row row-items <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+
+								<?php while ( have_posts() ) : the_post(); ?>
+
+									<div class="<?php echo esc_attr( blockchain_get_columns_classes( $layout ) ); ?>">
+
+										<?php get_template_part( 'template-parts/item-post', get_post_format() ); ?>
+
+									</div>
+
+								<?php endwhile; ?>
+
+							</div>
+							<?php
+
+							blockchain_posts_pagination();
+
+						else :
+
+							get_template_part( 'template-parts/article', 'none' );
+
+						endif;
+					?>
+				</div>
+
+				<?php get_sidebar(); ?>
+			</div>
+
+		<?php endif; ?>
+
+	</div>
+
+</main>
+
+<?php get_footer();
