@@ -28,17 +28,12 @@ This site is developed using Local by Flywheel for local development.
 
 ## Deployment
 
-This project is configured for deployment to **DigitalOcean** VPS servers.
-
-For setup instructions, see:
-- **Quick Start**: `DO-QUICK-START.md` - Fast setup guide
-- **Detailed Guide**: `DIGITALOCEAN-SETUP.md` - Complete documentation
-
-**Cost**: ~$11-17/month (dev + production droplets)
-
-Alternative hosting options:
+For production deployment, consider:
 - **Shared Hosting**: Namecheap, SiteGround, Bluehost ($3-10/month)
+- **VPS**: DigitalOcean, Linode ($5-6/month)
 - **Managed WordPress**: WP Engine, Kinsta (premium, $20+/month)
+
+See `README-VERCEL.md` for Vercel deployment notes (not recommended for full WordPress).
 
 ## Database
 

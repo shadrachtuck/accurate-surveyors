@@ -123,19 +123,25 @@ Version: 1.0
 
 /* === GLOBAL TYPOGRAPHY === */
 body,
-body.page,
-body.single,
-body.archive,
-body.blog {
+body.page
+ {
   font-family: "BebasNeue Regular", sans-serif !important;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.6;
-  color: var(--text-dark);
+  color: var(--primary-black);
+}
+/* body.single:target-current,
+body.archive:target-current,
+body.blog:target-current */
+
+::selection
+{
+  font-weight: 800;
 }
 
 p {
   font-family: "Helvetica Neue LT Std Condensed", sans-serif !important;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.6;
   color: var(--text-white);
 }
@@ -219,7 +225,7 @@ a:focus {
   color: var(--text-white);
   text-align: center;
   font-family: "BebasNeue Bold", sans-serif !important;
-  font-size: 16px;
+  font-size: 1em;
   padding: 10px 0;
 }
 
@@ -242,6 +248,7 @@ a:focus {
 }
 .navigation-main .nav-button:last-child > a {
   color: var(--text-white) !important;
+  padding-bottom: 10px !important;
 }
 .mobile-nav-trigger {
   color: var(--primary-black) !important;
@@ -382,6 +389,15 @@ a.button:hover,
 .navigation-main > .current-menu-parent > a,
 .navigation-main > .current-menu-ancestor > a {
   border-color: var(--primary-green);
+  font-weight: 800 !important;
+}
+
+/* Ensure selected menu items are black with heavier font-weight */
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a {
+  color: var(--primary-black) !important;
+  font-weight: 800 !important;
 }
 
 /* Active/pressed effect */
@@ -477,11 +493,21 @@ h2.page-hero-title {
   border-radius: 0 !important;
   
 }
+
+.current-menu-item {
+  font-weight: 800;
+}
+
 .sidebar a:hover,
 #menu-services li a:hover,
 .mm-listview a:hover {
   color: var(--primary-green) !important;
   transform: translateY(-5px);
+  font-weight: 800;
+}
+
+.page-hero .btn {
+  padding-bottom: 10px;
 }
 
 .widget_section {
@@ -541,7 +567,8 @@ h2.page-hero-title {
   border-color: unset !important;
 }
 /* === CARDS === */
-.entry-item:hover {
+.ci-grid-animate:hover
+ {
   transform: translateY(-5px);
 }
 /* === SERVICE CARDS === */
@@ -767,16 +794,14 @@ border-radius: 15px;
 }
 
 /* Shared card name link styles */
-.team .team-card-name a,
-.services .service-card-name a {
+.team .team-card-name a, .services .service-card-name a {
   color: var(--primary-black) !important;
-  font-family: "BebasNeue Regular", sans-serif !important;
+  font-family: "BebasNeue bold", sans-serif !important;
   font-size: 20px !important;
   text-transform: uppercase !important;
   text-decoration: none !important;
   line-height: 1.2 !important;
   letter-spacing: 0.5px !important;
-  text-align: left !important;
   display: block !important;
   width: 100%;
 }
@@ -821,7 +846,7 @@ border-radius: 15px;
   font-weight: 300 !important;
   line-height: 1.4 !important;
   font-family: inherit !important;
-  text-align: left !important;
+  text-align: center !important;
   width: 100%;
 }
 
@@ -949,8 +974,7 @@ area.customize-unpreviewable {
 
 .widget-section .row-items .entry-item-thumb img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: 18px;
 }
@@ -1246,43 +1270,21 @@ footer .widget .entry-item-thumb,
   .widget-section .row-items {
     display: flex;
     flex-wrap: nowrap;
-    align-items: stretch;
+    align-items: center;
     width: 55%;
     margin-left: -50px;
   }
-  
-  .widget-section .row-items .entry-item {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .widget-section .row-items .entry-item-thumb {
-    flex-shrink: 0;
-  }
-  
-  .widget-section .row-items .entry-item-thumb img {
-    height: 250px;
-    object-fit: cover;
-  }
-
 }
 
 /* === DESKTOP/FULL-SCREEN STYLES === */
 /* Apply max-height only for full-screen/desktop breakpoints (above 768px) */
 @media (min-width: 769px) {
-  
-
   .footer-logo-stack {
     margin-bottom: -16px;
   }
   .footer-social-icons p {
     margin: 0px 2% 0px 0px;
   }
-
-  .page-hero-slideshow {
-    padding: 20px 0px !important;
-}
-
 }
 
 /* === MOBILE RESPONSIVE === */
@@ -1296,7 +1298,14 @@ footer .widget .entry-item-thumb,
       #4a6b8a 100%
     ) !important;
   }
+  .widget-section .row-items .entry-item-thumb img {
+    height: 100%;
+    min-height: 300px;
+    min-width: 300px;
  
+     object-fit: cover;
+   }
+
   #ci-home-post-type-items-1 {
     padding-bottom: 10% !important;
   }
@@ -1320,7 +1329,7 @@ footer .widget .entry-item-thumb,
     gap: 20px;
   }
   .main .widget-section .row-items .entry-item-thumb img {
-    height: 200px;
+    height: auto;
     object-fit: cover;
   }
 
