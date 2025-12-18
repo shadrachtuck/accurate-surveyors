@@ -26,15 +26,6 @@ WordPress child theme for Accurate Surveyors & Mapping website.
 
 This site is developed using Local by Flywheel for local development.
 
-## Deployment
-
-For production deployment, consider:
-- **Shared Hosting**: Namecheap, SiteGround, Bluehost ($3-10/month)
-- **VPS**: DigitalOcean, Linode ($5-6/month)
-- **Managed WordPress**: WP Engine, Kinsta (premium, $20+/month)
-
-See `README-VERCEL.md` for Vercel deployment notes (not recommended for full WordPress).
-
 ## Database
 
 Local development uses:
