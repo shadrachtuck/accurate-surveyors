@@ -580,7 +580,7 @@ h2.page-hero-title {
   transition: transform 0.3s ease;
 
 }
-.ci-grid-animate  img{
+.ci-grid-animate {
 border-radius: 15px;
 }
 .ci-grid-animate .entry-item-title a {
@@ -960,7 +960,7 @@ area.customize-unpreviewable {
 .widget-section .row-items .entry-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 /* Ensure images use relative positioning and fill the container - ONLY for main widget sections */
@@ -974,9 +974,8 @@ area.customize-unpreviewable {
 
 .widget-section .row-items .entry-item-thumb img {
   width: 100%;
-  height: auto;
+  height: 25vh;
   display: block;
-  border-radius: 18px;
 }
 
 /* Style section subtitle - targeting p.section-subtitle inside .section-heading */
@@ -1287,6 +1286,12 @@ footer .widget .entry-item-thumb,
   }
 }
 
+@media (min-width: 990px) and (max-width: 1220px) {
+  .widget-section .row-items .entry-item-thumb img {
+    height: 22vh;
+  }
+}
+
 /* === MOBILE RESPONSIVE === */
 @media (max-width: 990px) {
   footer.footer.as26-footer-display-override,
@@ -1300,7 +1305,7 @@ footer .widget .entry-item-thumb,
   }
   .widget-section .row-items .entry-item-thumb img {
     height: 100%;
-    min-height: 300px;
+    max-height: 20vh;
     min-width: 300px;
  
      object-fit: cover;
@@ -1403,6 +1408,10 @@ footer .widget .entry-item-thumb,
 }
 
 @media (max-width: 576px) {
+  .widget-section .row-items .entry-item-thumb img {
+    max-height: 30vh;
+  }
+
   .bottom-info p {
     font-size: 0.6em;
   }
