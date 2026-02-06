@@ -113,7 +113,8 @@ function accurate_set_default_logo() {
 }
 add_action('after_setup_theme', 'accurate_set_default_logo');
 
-// #region agent log - Debug upload directory issue
+/*
+// #region agent log - Debug upload directory issue (uncomment to re-enable)
 function accurate_debug_get_log_path() {
     $workspace_log = '/Users/shadrachtuck/Local Sites/accurate-surveying-mapping/.cursor/debug.log';
     $workspace_dir = dirname($workspace_log);
@@ -137,15 +138,12 @@ function accurate_debug_upload_dir($upload_dir) {
     $current_timestamp = current_time('timestamp');
     $wp_date = date('Y/m', $current_timestamp);
     $uploads_use_yearmonth = get_option('uploads_use_yearmonth_folders');
-    
-    // Check directory existence and permissions
     $basedir_exists = isset($upload_dir['basedir']) ? is_dir($upload_dir['basedir']) : false;
     $basedir_writable = isset($upload_dir['basedir']) ? is_writable($upload_dir['basedir']) : false;
     $path_exists = isset($upload_dir['path']) ? is_dir($upload_dir['path']) : false;
     $path_writable = isset($upload_dir['path']) ? is_writable($upload_dir['path']) : false;
     $path_perms = isset($upload_dir['path']) && file_exists($upload_dir['path']) ? substr(sprintf('%o', fileperms($upload_dir['path'])), -4) : 'N/A';
     $basedir_perms = isset($upload_dir['basedir']) && file_exists($upload_dir['basedir']) ? substr(sprintf('%o', fileperms($upload_dir['basedir'])), -4) : 'N/A';
-    
     $log_entry = json_encode([
         'sessionId' => 'debug-session',
         'runId' => 'run1',
@@ -175,7 +173,6 @@ function accurate_debug_upload_dir($upload_dir) {
         'timestamp' => round(microtime(true) * 1000)
     ]) . "\n";
     @file_put_contents($log_path, $log_entry, FILE_APPEND);
-    
     return $upload_dir;
 }
 add_filter('upload_dir', 'accurate_debug_upload_dir', 999);
@@ -189,7 +186,6 @@ function accurate_debug_wp_upload_dir() {
     $upload_dir = wp_upload_dir();
     $current_time = current_time('mysql');
     $current_timestamp = current_time('timestamp');
-    
     $log_entry = json_encode([
         'sessionId' => 'debug-session',
         'runId' => 'run1',
@@ -219,7 +215,6 @@ function accurate_debug_upload_handler($file) {
         @mkdir($log_dir, 0755, true);
     }
     $upload_dir = wp_upload_dir();
-    
     $log_entry = json_encode([
         'sessionId' => 'debug-session',
         'runId' => 'run1',
@@ -237,7 +232,6 @@ function accurate_debug_upload_handler($file) {
         'timestamp' => round(microtime(true) * 1000)
     ]) . "\n";
     @file_put_contents($log_path, $log_entry, FILE_APPEND);
-    
     return $file;
 }
 add_filter('wp_handle_upload_prefilter', 'accurate_debug_upload_handler', 999);
@@ -248,7 +242,6 @@ function accurate_debug_upload_error($movefile, $file) {
     if (!is_dir($log_dir)) {
         @mkdir($log_dir, 0755, true);
     }
-    
     $log_entry = json_encode([
         'sessionId' => 'debug-session',
         'runId' => 'run1',
@@ -263,8 +256,8 @@ function accurate_debug_upload_error($movefile, $file) {
         'timestamp' => round(microtime(true) * 1000)
     ]) . "\n";
     @file_put_contents($log_path, $log_entry, FILE_APPEND);
-    
     return $movefile;
 }
 add_filter('wp_handle_upload', 'accurate_debug_upload_error', 999, 2);
 // #endregion
+*/
