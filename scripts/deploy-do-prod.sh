@@ -4,10 +4,15 @@
 
 set -e
 
+# Run from project root (parent of scripts/)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$PROJECT_ROOT"
+
 echo "🚀 Deploying to DigitalOcean Production Server..."
 
 # Configuration - UPDATE THESE VALUES
-PROD_IP="YOUR_PROD_DROPLET_IP"
+PROD_IP="157.245.226.61"
 PROD_USER="root"
 PROD_PATH="/var/www/html/wp-content/themes/"
 THEME_NAME="accurate surveyors 2025"
@@ -79,6 +84,8 @@ fi
 # Extract new theme
 unzip -q /tmp/theme.zip -d .
 rm /tmp/theme.zip
+# Ensure debug log directory exists for upload debugging
+mkdir -p "accurate surveyors 2025/.cursor"
 # Set permissions
 chown -R www-data:www-data "accurate surveyors 2025"
 chmod -R 755 "accurate surveyors 2025"
@@ -97,5 +104,10 @@ echo "2. Verify theme is active"
 echo "3. Test all pages and functionality"
 echo "4. Check for any errors in logs:"
 echo "   ssh $PROD_USER@$PROD_IP 'tail -f /var/log/apache2/error.log'"
+echo ""
+echo "5. To review upload debug logs (after reproducing the upload error):"
+echo "   ssh $PROD_USER@$PROD_IP 'cat /var/www/html/wp-content/themes/accurate\\ surveyors\\ 2025/.cursor/debug.log'"
+echo "   Or tail in real time:"
+echo "   ssh $PROD_USER@$PROD_IP 'tail -f \"/var/www/html/wp-content/themes/accurate surveyors 2025/.cursor/debug.log\"'"
 echo ""
 

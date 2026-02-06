@@ -113,3 +113,158 @@ function accurate_set_default_logo() {
 }
 add_action('after_setup_theme', 'accurate_set_default_logo');
 
+// #region agent log - Debug upload directory issue
+function accurate_debug_get_log_path() {
+    $workspace_log = '/Users/shadrachtuck/Local Sites/accurate-surveying-mapping/.cursor/debug.log';
+    $workspace_dir = dirname($workspace_log);
+    if (is_dir($workspace_dir) || @mkdir($workspace_dir, 0755, true)) {
+        return $workspace_log;
+    }
+    $theme_log_dir = get_stylesheet_directory() . '/.cursor';
+    if (!is_dir($theme_log_dir)) {
+        @mkdir($theme_log_dir, 0755, true);
+    }
+    return $theme_log_dir . '/debug.log';
+}
+
+function accurate_debug_upload_dir($upload_dir) {
+    $log_path = accurate_debug_get_log_path();
+    $log_dir = dirname($log_path);
+    if (!is_dir($log_dir)) {
+        @mkdir($log_dir, 0755, true);
+    }
+    $current_time = current_time('mysql');
+    $current_timestamp = current_time('timestamp');
+    $wp_date = date('Y/m', $current_timestamp);
+    $uploads_use_yearmonth = get_option('uploads_use_yearmonth_folders');
+    
+    // Check directory existence and permissions
+    $basedir_exists = isset($upload_dir['basedir']) ? is_dir($upload_dir['basedir']) : false;
+    $basedir_writable = isset($upload_dir['basedir']) ? is_writable($upload_dir['basedir']) : false;
+    $path_exists = isset($upload_dir['path']) ? is_dir($upload_dir['path']) : false;
+    $path_writable = isset($upload_dir['path']) ? is_writable($upload_dir['path']) : false;
+    $path_perms = isset($upload_dir['path']) && file_exists($upload_dir['path']) ? substr(sprintf('%o', fileperms($upload_dir['path'])), -4) : 'N/A';
+    $basedir_perms = isset($upload_dir['basedir']) && file_exists($upload_dir['basedir']) ? substr(sprintf('%o', fileperms($upload_dir['basedir'])), -4) : 'N/A';
+    
+    $log_entry = json_encode([
+        'sessionId' => 'debug-session',
+        'runId' => 'run1',
+        'hypothesisId' => 'A',
+        'location' => 'functions.php:upload_dir_filter',
+        'message' => 'upload_dir filter called',
+        'data' => [
+            'upload_path' => $upload_dir['path'] ?? 'N/A',
+            'upload_url' => $upload_dir['url'] ?? 'N/A',
+            'subdir' => $upload_dir['subdir'] ?? 'N/A',
+            'basedir' => $upload_dir['basedir'] ?? 'N/A',
+            'baseurl' => $upload_dir['baseurl'] ?? 'N/A',
+            'wp_current_time' => $current_time,
+            'wp_current_timestamp' => $current_timestamp,
+            'wp_expected_date_folder' => $wp_date,
+            'uploads_use_yearmonth_folders' => $uploads_use_yearmonth,
+            'timezone_string' => get_option('timezone_string'),
+            'gmt_offset' => get_option('gmt_offset'),
+            'basedir_exists' => $basedir_exists,
+            'basedir_writable' => $basedir_writable,
+            'basedir_perms' => $basedir_perms,
+            'path_exists' => $path_exists,
+            'path_writable' => $path_writable,
+            'path_perms' => $path_perms,
+            'error' => $upload_dir['error'] ?? false
+        ],
+        'timestamp' => round(microtime(true) * 1000)
+    ]) . "\n";
+    @file_put_contents($log_path, $log_entry, FILE_APPEND);
+    
+    return $upload_dir;
+}
+add_filter('upload_dir', 'accurate_debug_upload_dir', 999);
+
+function accurate_debug_wp_upload_dir() {
+    $log_path = accurate_debug_get_log_path();
+    $log_dir = dirname($log_path);
+    if (!is_dir($log_dir)) {
+        @mkdir($log_dir, 0755, true);
+    }
+    $upload_dir = wp_upload_dir();
+    $current_time = current_time('mysql');
+    $current_timestamp = current_time('timestamp');
+    
+    $log_entry = json_encode([
+        'sessionId' => 'debug-session',
+        'runId' => 'run1',
+        'hypothesisId' => 'B',
+        'location' => 'functions.php:wp_upload_dir_check',
+        'message' => 'wp_upload_dir() result',
+        'data' => [
+            'upload_path' => $upload_dir['path'] ?? 'N/A',
+            'upload_url' => $upload_dir['url'] ?? 'N/A',
+            'subdir' => $upload_dir['subdir'] ?? 'N/A',
+            'basedir' => $upload_dir['basedir'] ?? 'N/A',
+            'baseurl' => $upload_dir['baseurl'] ?? 'N/A',
+            'wp_current_time' => $current_time,
+            'wp_current_timestamp' => $current_timestamp,
+            'error' => $upload_dir['error'] ?? false
+        ],
+        'timestamp' => round(microtime(true) * 1000)
+    ]) . "\n";
+    @file_put_contents($log_path, $log_entry, FILE_APPEND);
+}
+add_action('admin_init', 'accurate_debug_wp_upload_dir');
+
+function accurate_debug_upload_handler($file) {
+    $log_path = accurate_debug_get_log_path();
+    $log_dir = dirname($log_path);
+    if (!is_dir($log_dir)) {
+        @mkdir($log_dir, 0755, true);
+    }
+    $upload_dir = wp_upload_dir();
+    
+    $log_entry = json_encode([
+        'sessionId' => 'debug-session',
+        'runId' => 'run1',
+        'hypothesisId' => 'C',
+        'location' => 'functions.php:upload_handler',
+        'message' => 'File upload handler called',
+        'data' => [
+            'file_name' => $file['name'] ?? 'N/A',
+            'file_type' => $file['type'] ?? 'N/A',
+            'upload_path' => $upload_dir['path'] ?? 'N/A',
+            'upload_subdir' => $upload_dir['subdir'] ?? 'N/A',
+            'target_path' => isset($upload_dir['path']) && isset($file['name']) ? $upload_dir['path'] . '/' . $file['name'] : 'N/A',
+            'upload_error' => $upload_dir['error'] ?? false
+        ],
+        'timestamp' => round(microtime(true) * 1000)
+    ]) . "\n";
+    @file_put_contents($log_path, $log_entry, FILE_APPEND);
+    
+    return $file;
+}
+add_filter('wp_handle_upload_prefilter', 'accurate_debug_upload_handler', 999);
+
+function accurate_debug_upload_error($movefile, $file) {
+    $log_path = accurate_debug_get_log_path();
+    $log_dir = dirname($log_path);
+    if (!is_dir($log_dir)) {
+        @mkdir($log_dir, 0755, true);
+    }
+    
+    $log_entry = json_encode([
+        'sessionId' => 'debug-session',
+        'runId' => 'run1',
+        'hypothesisId' => 'D',
+        'location' => 'functions.php:upload_error',
+        'message' => 'Upload error detected',
+        'data' => [
+            'file_name' => $file['name'] ?? 'N/A',
+            'error' => $movefile['error'] ?? 'N/A',
+            'file_path' => $movefile['file'] ?? 'N/A'
+        ],
+        'timestamp' => round(microtime(true) * 1000)
+    ]) . "\n";
+    @file_put_contents($log_path, $log_entry, FILE_APPEND);
+    
+    return $movefile;
+}
+add_filter('wp_handle_upload', 'accurate_debug_upload_error', 999, 2);
+// #endregion
