@@ -14,7 +14,7 @@ echo "🚀 Deploying to DigitalOcean Production Server..."
 # Configuration - UPDATE THESE VALUES
 PROD_IP="157.245.226.61"
 PROD_USER="root"
-PROD_PATH="/var/www/html/wp-content/themes/"
+PROD_PATH="/var/www/html/app/public/wp-content/themes/"
 THEME_NAME="accurate surveyors 2025"
 LOCAL_THEME_PATH="app/public/wp-content/themes/$THEME_NAME"
 
@@ -74,7 +74,7 @@ scp "$TEMP_ZIP" ${PROD_USER}@${PROD_IP}:/tmp/theme.zip
 
 echo -e "${YELLOW}Step 3: Extracting on server...${NC}"
 ssh ${PROD_USER}@${PROD_IP} << 'ENDSSH'
-cd /var/www/html/wp-content/themes/
+cd /var/www/html/app/public/wp-content/themes/
 # Backup existing theme
 if [ -d "accurate surveyors 2025" ]; then
     BACKUP_NAME="accurate surveyors 2025.backup.$(date +%Y%m%d_%H%M%S)"
@@ -106,8 +106,8 @@ echo "4. Check for any errors in logs:"
 echo "   ssh $PROD_USER@$PROD_IP 'tail -f /var/log/apache2/error.log'"
 echo ""
 echo "5. To review upload debug logs (after reproducing the upload error):"
-echo "   ssh $PROD_USER@$PROD_IP 'cat /var/www/html/wp-content/themes/accurate\\ surveyors\\ 2025/.cursor/debug.log'"
+echo "   ssh $PROD_USER@$PROD_IP 'cat \"/var/www/html/app/public/wp-content/themes/accurate surveyors 2025/.cursor/debug.log\"'"
 echo "   Or tail in real time:"
-echo "   ssh $PROD_USER@$PROD_IP 'tail -f \"/var/www/html/wp-content/themes/accurate surveyors 2025/.cursor/debug.log\"'"
+echo "   ssh $PROD_USER@$PROD_IP 'tail -f \"/var/www/html/app/public/wp-content/themes/accurate surveyors 2025/.cursor/debug.log\"'"
 echo ""
 
